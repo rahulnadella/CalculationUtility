@@ -15,7 +15,7 @@ protocol NumericType
     func *(lhs: Self, rhs: Self) -> Self
     func /(lhs: Self, rhs: Self) -> Self
     func %(lhs: Self, rhs: Self) -> Self
-    init(_ v: Int)
+    init()
 }
 
 extension Double : NumericType {}
@@ -31,8 +31,40 @@ extension UInt16 : NumericType {}
 extension UInt32 : NumericType {}
 extension UInt64 : NumericType {}
 
-func +(lhs: Int, rhs: Double) -> Double {
+prefix operator ∑ {}
+
+prefix func ∑<T: NumericType>(input: [T]) -> T
+{
+    return sumOf(input)
+}
+
+prefix func ∑<T: NumericType>(input : Slice<T>) -> T
+{
+    return sumOf(input)
+}
+
+func sumOf<T: NumericType>(input : T...) -> T
+{
+    return sumOf(input)
+}
+
+func sumOf<T: NumericType>(input : Slice<T>) -> T
+{
+    return sumOf([] + input)
+}
+
+func sumOf<T: NumericType>(input : [T]) -> T
+{
+    return reduce(input, T()) {$0 + $1}
+}
+
+func +(lhs: Int, rhs: Double) -> Double
+{
     return Double(lhs) + rhs
+}
+
+func +(lhs: Double, rhs: Int) -> Double {
+    return lhs + Double(rhs)
 }
 
 func squared<T : NumericType>(number: T) -> T
