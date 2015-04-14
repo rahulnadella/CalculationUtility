@@ -30,7 +30,7 @@ arithmetic operators that take numerical values (either literals or variables)
 as their operands and return a single numerical value. The standard arithmetic 
 operators are addition (+), subtraction (-), multiplication (*), and division (/).
 
-@version 1.0
+:version 1.0
 */
 protocol NumericType
 {
@@ -87,7 +87,7 @@ prefix operator ∑ {}
 /*
 The prefix of the sum function using an Array.
 
-@param T
+:param T
         The Array of specific NumericType (for instance, Double, Float, Int, etc.)
 */
 prefix func ∑<T: NumericType>(input: [T]) -> T
@@ -98,7 +98,7 @@ prefix func ∑<T: NumericType>(input: [T]) -> T
 /*
 The prefix of the sum function using a specific section of MutableCollectionType
 
-@param T
+:param T
         The MutableCollectionType (Array, etc.) of specific NumericType 
         (for instance, Double, Float, Int, etc.)
 */
@@ -110,7 +110,7 @@ prefix func ∑<T: NumericType>(input : Slice<T>) -> T
 /*
 The sumOf function using variable arguments of specific NumericType (Double, Float, Int, etc.).
 
-@param T
+:param T
         The variable arguments of specific NumericType (for instance, Double, Float, Int, etc.)
 */
 func sumOf<T: NumericType>(input : T...) -> T
@@ -122,7 +122,7 @@ func sumOf<T: NumericType>(input : T...) -> T
 The sumOf function using MutableCollectionType (for instance, Array, Set, etc.) of specific 
 NumericType (Double, Float, Int, etc.).
 
-@param T
+:param T
         The MutableCollectionType of specific NumericType (for instance, Double, Float, Int, etc.)
 */
 func sumOf<T: NumericType>(input : Slice<T>) -> T
@@ -133,7 +133,7 @@ func sumOf<T: NumericType>(input : Slice<T>) -> T
 /*
 The sumOf function of the array of specific NumericType (Double, Float, Int, etc.).
 
-@param T
+:param T
         The Array of specific NumericType (for instance, Double, Float, Int, etc.)
 */
 func sumOf<T: NumericType>(input : [T]) -> T
@@ -142,8 +142,13 @@ func sumOf<T: NumericType>(input : [T]) -> T
 }
 
 /*
-The + function overriden to take the parameters of Int,Double and return 
+The + function overloaded to take the parameters of Int,Double and return
 an explicit conversion of a Double.
+
+:param lhs
+        The Integer value
+:param rhs
+        The Double value
 */
 func +(lhs: Int, rhs: Double) -> Double
 {
@@ -151,8 +156,13 @@ func +(lhs: Int, rhs: Double) -> Double
 }
 
 /*
-The + function overriden to take the parameters of Double,Int and return 
+The + function overloaded to take the parameters of Double,Int and return 
 an explicit conversion of a Double.
+
+:param lhs
+        The Double value
+:param rhs
+        The Integer value
 */
 func +(lhs: Double, rhs: Int) -> Double {
     return lhs + Double(rhs)
@@ -160,6 +170,9 @@ func +(lhs: Double, rhs: Int) -> Double {
 
 /*
 The squared function returns a NumericType²
+
+:param T
+        The specific NumberType (Double, Float, Int, etc.)
 */
 func squared<T : NumericType>(number: T) -> T
 {

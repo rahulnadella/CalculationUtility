@@ -24,18 +24,29 @@ THE SOFTWARE.
 
 import UIKit
 import XCTest
+/*
+The CalculationUtilityTests class provides the specific test cases for the 
+implemenation of the CalculationUtility.
 
+:version 1.0
+*/
 class CalculationUtilityTests: XCTestCase
 {
+    /*
+    Setup method for CalculationUtilityTests
+    */
     override func setUp()
     {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        /* Put setup code here. This method is called before the invocation of each test method in the class. */
     }
     
+    /*
+    TearDown method for the CalculationUtilityTests
+    */
     override func tearDown()
     {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        /* Put teardown code here. This method is called after the invocation of each test method in the class. */
         super.tearDown()
     }
     
@@ -83,6 +94,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(5.0, total);
     }
     
+    /*
+    The testPerformanceExample tests the performance of all CalculationUtility class functions
+    */
     func testPerformanceExample()
     {
         /* This is an example of a performance test case. */
