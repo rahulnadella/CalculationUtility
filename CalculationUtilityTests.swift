@@ -39,7 +39,8 @@ class CalculationUtilityTests: XCTestCase
         super.tearDown()
     }
     
-    func testSumOfInt() {
+    func testSumOfInt()
+    {
         let sum1 = ∑([1, 2, 3])
         let sum2 = sumOf(1, 2, 3)
         
@@ -56,7 +57,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(3, sum5, "Int should be sumable")
     }
     
-    func testSumOfDouble() {
+    func testSumOfDouble()
+    {
         let sum1 = ∑([1.1, 2.2, 3.3])
         let sum2 = sumOf(1.1, 2.2, 3.3)
         
@@ -83,10 +85,12 @@ class CalculationUtilityTests: XCTestCase
     
     func testPerformanceExample()
     {
-        // This is an example of a performance test case.
+        /* This is an example of a performance test case. */
         self.measureBlock()
         {
-            // Put the code you want to measure the time of here.
+            self.testSumOfInt()
+            self.testSumOfDouble()
+            self.testDoubleAddition()
         }
     }
     
