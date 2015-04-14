@@ -65,9 +65,11 @@ protocol NumericType
     init()
 }
 /*
-All of the numeric types already implement these, but at this point the compiler 
+All of the numeric types already implement these, but at this point the compiler
 doesn’t know that they conform to the new NumericType protocol. This done through
-an Extension (in Swift also known as a Category in Objective-C).
+an Extension (in Swift also known as a Category in Objective-C). 
+
+Apple calls this “declaring protocol adoption with an extension.”
 */
 extension Double : NumericType {}
 extension Float  : NumericType {}
@@ -88,7 +90,9 @@ prefix operator ∑ {}
 The prefix of the sum function using an Array.
 
 :param T
-        The Array of specific NumericType (for instance, Double, Float, Int, etc.)
+        The Array of specific NumericType (using the NumericType protocol as a 
+        generic constraint, and call it with any numeric type we like for instance, 
+        Double, Float, Int, etc.)
 */
 prefix func ∑<T: NumericType>(input: [T]) -> T
 {
@@ -100,7 +104,8 @@ The prefix of the sum function using a specific section of MutableCollectionType
 
 :param T
         The MutableCollectionType (Array, etc.) of specific NumericType 
-        (for instance, Double, Float, Int, etc.)
+        (using the NumericType protocol as a generic constraint, and call 
+        it with any numeric type we like for instance, Double, Float, Int, etc.)
 */
 prefix func ∑<T: NumericType>(input : Slice<T>) -> T
 {
@@ -111,7 +116,9 @@ prefix func ∑<T: NumericType>(input : Slice<T>) -> T
 The sumOf function using variable arguments of specific NumericType (Double, Float, Int, etc.).
 
 :param T
-        The variable arguments of specific NumericType (for instance, Double, Float, Int, etc.)
+        The variable arguments of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
 */
 func sumOf<T: NumericType>(input : T...) -> T
 {
@@ -123,7 +130,9 @@ The sumOf function using MutableCollectionType (for instance, Array, Set, etc.) 
 NumericType (Double, Float, Int, etc.).
 
 :param T
-        The MutableCollectionType of specific NumericType (for instance, Double, Float, Int, etc.)
+        The MutableCollectionType of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.))
 */
 func sumOf<T: NumericType>(input : Slice<T>) -> T
 {
@@ -134,7 +143,9 @@ func sumOf<T: NumericType>(input : Slice<T>) -> T
 The sumOf function of the array of specific NumericType (Double, Float, Int, etc.).
 
 :param T
-        The Array of specific NumericType (for instance, Double, Float, Int, etc.)
+        The Array of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
 */
 func sumOf<T: NumericType>(input : [T]) -> T
 {
@@ -172,7 +183,9 @@ func +(lhs: Double, rhs: Int) -> Double {
 The squared function returns a NumericType²
 
 :param T
-        The specific NumberType (Double, Float, Int, etc.)
+        The specific NumberType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
 */
 func squared<T : NumericType>(number: T) -> T
 {
