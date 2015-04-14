@@ -24,16 +24,51 @@ THE SOFTWARE.
 
 import Foundation
 
+/*
+The NumericType protocol has the common requirements for types that support
+arithmetic operators that take numerical values (either literals or variables) 
+as their operands and return a single numerical value. The standard arithmetic 
+operators are addition (+), subtraction (-), multiplication (*), and division (/).
+
+@version 1.0
+*/
 protocol NumericType
 {
+    /*
+    Add `lhs` and `rhs`, returning a result and trapping in case of
+    arithmetic overflow.
+    */
     func +(lhs: Self, rhs: Self) -> Self
+    /*
+    Subtract `lhs` and `rhs`, returning a result and trapping in case of
+    arithmetic overflow.
+    */
     func -(lhs: Self, rhs: Self) -> Self
+    /*
+    Multiply `lhs` and `rhs`, returning a result and trapping in case of
+    arithmetic overflow.
+    */
     func *(lhs: Self, rhs: Self) -> Self
+    /*
+    Divide `lhs` and `rhs`, returning a result and trapping in case of
+    arithmetic overflow.
+    */
     func /(lhs: Self, rhs: Self) -> Self
+    /*
+    Divide `lhs` and `rhs`, returning the remainder and trapping in case of
+    arithmetic overflow.
+    */
     func %(lhs: Self, rhs: Self) -> Self
+    /* 
+    Initializer for NumericType that currently takes not arguments
+    */
     init()
 }
-
+/*
+All of the numeric types already implement these, but at this point the compiler 
+doesn’t know that they conform to the new NumericType protocol. This done through
+an Extension (in Swift also known as a Category in Objective-C).
+*/
 extension Double : NumericType {}
 extension Float  : NumericType {}
 extension Int    : NumericType {}
@@ -47,42 +82,85 @@ extension UInt16 : NumericType {}
 extension UInt32 : NumericType {}
 extension UInt64 : NumericType {}
 
+/* The SUMMATION Prefix (similiar to ++) */
 prefix operator ∑ {}
+/*
+The prefix of the sum function using an Array.
 
+@param T
+        The Array of specific NumericType (for instance, Double, Float, Int, etc.)
+*/
 prefix func ∑<T: NumericType>(input: [T]) -> T
 {
     return sumOf(input)
 }
 
+/*
+The prefix of the sum function using a specific section of MutableCollectionType
+
+@param T
+        The MutableCollectionType (Array, etc.) of specific NumericType 
+        (for instance, Double, Float, Int, etc.)
+*/
 prefix func ∑<T: NumericType>(input : Slice<T>) -> T
 {
     return sumOf(input)
 }
 
+/*
+The sumOf function using variable arguments of specific NumericType (Double, Float, Int, etc.).
+
+@param T
+        The variable arguments of specific NumericType (for instance, Double, Float, Int, etc.)
+*/
 func sumOf<T: NumericType>(input : T...) -> T
 {
     return sumOf(input)
 }
 
+/*
+The sumOf function using MutableCollectionType (for instance, Array, Set, etc.) of specific 
+NumericType (Double, Float, Int, etc.).
+
+@param T
+        The MutableCollectionType of specific NumericType (for instance, Double, Float, Int, etc.)
+*/
 func sumOf<T: NumericType>(input : Slice<T>) -> T
 {
     return sumOf([] + input)
 }
 
+/*
+The sumOf function of the array of specific NumericType (Double, Float, Int, etc.).
+
+@param T
+        The Array of specific NumericType (for instance, Double, Float, Int, etc.)
+*/
 func sumOf<T: NumericType>(input : [T]) -> T
 {
     return reduce(input, T()) {$0 + $1}
 }
 
+/*
+The + function overriden to take the parameters of Int,Double and return 
+an explicit conversion of a Double.
+*/
 func +(lhs: Int, rhs: Double) -> Double
 {
     return Double(lhs) + rhs
 }
 
+/*
+The + function overriden to take the parameters of Double,Int and return 
+an explicit conversion of a Double.
+*/
 func +(lhs: Double, rhs: Int) -> Double {
     return lhs + Double(rhs)
 }
 
+/*
+The squared function returns a NumericType²
+*/
 func squared<T : NumericType>(number: T) -> T
 {
     /* Uses * Operator */
