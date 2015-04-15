@@ -118,6 +118,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(11), totalFloatInt)
     }
     
+    func testFloatDoubleAddition()
+    {
+        var totalFloatDouble = floatValue + doubleValue
+        XCTAssertNotNil(totalFloatDouble)
+        XCTAssertEqualWithAccuracy(2.34567890123456, totalFloatDouble, 0.000005)
+    }
+    
+    func testDoubleFloatAddition()
+    {
+        var totalDoubleFloat = doubleValue + floatValue
+        XCTAssertNotNil(totalDoubleFloat)
+        XCTAssertEqualWithAccuracy(2.34567890123456, totalDoubleFloat, 0.000005)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -132,6 +146,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleIntAddition()
             self.testIntFloatAddition()
             self.testFloatIntAddition()
+            self.testFloatDoubleAddition()
+            self.testDoubleFloatAddition()
         }
     }
     
