@@ -170,7 +170,7 @@ func squared<T : NumericType>(number: T) -> T
     return number * number
 }
 
-//MARK: Explicit Cast Functions
+//MARK: Explicit Addition Cast Functions
 
 /*
 The + function overloaded to take the parameters of Int,Double and return
@@ -320,4 +320,36 @@ an explicit conversion of a Float.
 func +(lhs: Float, rhs: UInt) -> Float
 {
     return lhs + Float(rhs)
+}
+
+//MARK: Explicit Subtraction Cast Functions
+
+/*
+The - function overloaded to take the parameters of Int,Double and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Integer value
+:param rhs
+        The Double value
+:return An explicitly cast Double value
+*/
+func -(lhs: Int, rhs: Double) -> Double
+{
+    return Double(lhs) - rhs
+}
+
+/*
+The - function overloaded to take the parameters of Double,Int and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Double value
+:param rhs
+        The Integer value
+:return An explicitly cast Double value
+*/
+func -(lhs: Double, rhs: Int) -> Double
+{
+    return lhs - Double(rhs)
 }

@@ -161,6 +161,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1235.0), totalFloatUIntValue)
     }
     
+    func testIntDoubleSubtraction()
+    {
+        var totalIntDoubleValue = integerValue - doubleValue
+        XCTAssertNotNil(totalIntDoubleValue)
+        XCTAssertEqualWithAccuracy(8.65432109876544, totalIntDoubleValue, 0.00000001)
+    }
+    
+    func testDoublIntSubtraction()
+    {
+        var totalDoubleIntValue = doubleValue - integerValue
+        XCTAssertNotNil(totalDoubleIntValue)
+        XCTAssertEqualWithAccuracy(-8.65432109876544, totalDoubleIntValue, 0.00000001)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -181,6 +195,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntAddition()
             self.testUIntFloatAddition()
             self.testFloatUIntAddition()
+            self.testIntDoubleSubtraction()
+            self.testDoublIntSubtraction()
         }
     }
     
