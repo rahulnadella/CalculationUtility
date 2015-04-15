@@ -204,7 +204,7 @@ func +(lhs: Double, rhs: Int) -> Double
 
 /*
 The + function overloaded to take the parameters of Int,Float and return
-an explicit conversion of a Double.
+an explicit conversion of a Float.
 
 :param lhs
         The Integer value
@@ -219,7 +219,7 @@ func +(lhs: Int, rhs: Float) -> Float
 
 /*
 The + function overloaded to take the parameters of Float,Int and return
-an explicit conversion of a Double.
+an explicit conversion of a Float.
 
 :param lhs
         The Float value
@@ -290,4 +290,34 @@ an explicit conversion of a Double.
 func +(lhs: Double, rhs: UInt) -> Double
 {
     return lhs + Double(rhs)
+}
+
+/*
+The + function overloaded to take the parameters of UInt,Float and return
+an explicit conversion of a Float.
+
+:param lhs
+        The UInt value
+:param rhs
+        The Float value
+:return An explicitly cast Float value
+*/
+func +(lhs: UInt, rhs: Float) -> Float
+{
+    return Float(lhs) + rhs
+}
+
+/*
+The + function overloaded to take the parameters of Float,UInt and return
+an explicit conversion of a Float.
+
+:param lhs
+        The Float value
+:param rhs
+        The UInt value
+:return An explicitly cast Float value
+*/
+func +(lhs: Float, rhs: UInt) -> Float
+{
+    return lhs + Float(rhs)
 }
