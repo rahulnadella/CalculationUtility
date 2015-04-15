@@ -32,12 +32,16 @@ implemenation of the CalculationUtility.
 */
 class CalculationUtilityTests: XCTestCase
 {
+    private var integerValue:Int = 10
+    private var floatValue:Float = 1.0
+    private var doubleValue:Double = 1.34567890123456
     /*
     Setup method for CalculationUtilityTests
     */
     override func setUp()
     {
         super.setUp()
+        
         /* Put setup code here. This method is called before the invocation of each test method in the class. */
     }
     
@@ -86,12 +90,32 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(3.3, sum5, accuracy, "Double should be sumable")
     }
     
-    func testDoubleAddition()
+    func testIntDoubleAddition()
     {
-        var a = 3;
-        var b = 2.0;
-        var total = a + b
-        XCTAssertEqual(5.0, total);
+        var totalIntDouble = integerValue + doubleValue
+        XCTAssertNotNil(totalIntDouble)
+        XCTAssertEqual(11.34567890123456, totalIntDouble)
+    }
+    
+    func testDoubleIntAddition()
+    {
+        var totalDoubleInt = doubleValue + integerValue
+        XCTAssertNotNil(totalDoubleInt)
+        XCTAssertEqual(11.34567890123456, totalDoubleInt)
+    }
+    
+    func testIntFloatAddition()
+    {
+        var totalIntFloat = integerValue + floatValue
+        XCTAssertNotNil(totalIntFloat)
+        XCTAssertEqual(Float(11), totalIntFloat)
+    }
+    
+    func testFloatIntAddition()
+    {
+        var totalFloatInt = floatValue + integerValue
+        XCTAssertNotNil(totalFloatInt)
+        XCTAssertEqual(Float(11), totalFloatInt)
     }
     
     /*
@@ -104,7 +128,10 @@ class CalculationUtilityTests: XCTestCase
         {
             self.testSumOfInt()
             self.testSumOfDouble()
-            self.testDoubleAddition()
+            self.testIntDoubleAddition()
+            self.testDoubleIntAddition()
+            self.testIntFloatAddition()
+            self.testFloatIntAddition()
         }
     }
     

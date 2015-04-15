@@ -180,6 +180,7 @@ an explicit conversion of a Double.
         The Integer value
 :param rhs
         The Double value
+:return An Explicitly cast Double value
 */
 func +(lhs: Int, rhs: Double) -> Double
 {
@@ -194,7 +195,36 @@ an explicit conversion of a Double.
         The Double value
 :param rhs
         The Integer value
+:return An Explicitly cast Double value
 */
 func +(lhs: Double, rhs: Int) -> Double {
     return lhs + Double(rhs)
+}
+
+/*
+The + function overloaded to take the parameters of Int,Float and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Integer value
+:param rhs
+        The Float value
+:return An Explicitly cast Float value
+*/
+func +(lhs: Int, rhs: Float) -> Float {
+    return Float(lhs) + rhs
+}
+
+/*
+The + function overloaded to take the parameters of Float,Int and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Float value
+:param rhs
+        The Integer value
+:return An Explicitly cast Float value
+*/
+func +(lhs: Float, rhs: Int) -> Float {
+    return lhs + Float(rhs)
 }
