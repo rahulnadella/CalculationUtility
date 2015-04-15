@@ -84,7 +84,7 @@ extension UInt16 : NumericType {}
 extension UInt32 : NumericType {}
 extension UInt64 : NumericType {}
 
-//MARK: Summation Functions
+//MARK: ###########################Summation Functions###########################
 
 /* The SUMMATION Prefix (similiar to ++) */
 prefix operator ∑ {}
@@ -154,7 +154,7 @@ func sumOf<T: NumericType>(input : [T]) -> T
     return reduce(input, T()) {$0 + $1}
 }
 
-//MARK: Additional Functions for Calculated Numerical Values
+//MARK: ###########Additional Functions for Calculated Numerical Values###########
 
 /*
 The squared function returns a NumericType²
@@ -170,7 +170,7 @@ func squared<T : NumericType>(number: T) -> T
     return number * number
 }
 
-//MARK: Explicit Addition Cast Functions
+//MARK: ####################Explicit Addition Cast Functions####################
 
 /*
 The + function overloaded to take the parameters of Int,Double and return
@@ -322,7 +322,7 @@ func +(lhs: Float, rhs: UInt) -> Float
     return lhs + Float(rhs)
 }
 
-//MARK: Explicit Subtraction Cast Functions
+//MARK: ####################Explicit Subtraction Cast Functions####################
 
 /*
 The - function overloaded to take the parameters of Int,Double and return
