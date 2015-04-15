@@ -93,6 +93,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(3.3, sum5, accuracy, "Double should be sumable")
     }
     
+    /*
+    Function tests CalculationUtility.+(Int, Double)
+    */
     func testIntDoubleAddition()
     {
         var totalIntDouble = integerValue + doubleValue
@@ -100,6 +103,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(11.34567890123456, totalIntDouble)
     }
     
+    /*
+    Function tests CalculationUtility.+(Double, Int)
+    */
     func testDoubleIntAddition()
     {
         var totalDoubleInt = doubleValue + integerValue
@@ -107,6 +113,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(11.34567890123456, totalDoubleInt)
     }
     
+    /*
+    Function tests CalculationUtility.+(Int, Float)
+    */
     func testIntFloatAddition()
     {
         var totalIntFloat = integerValue + floatValue
@@ -114,6 +123,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(11), totalIntFloat)
     }
     
+    /*
+    Function tests CalculationUtility.+(Float, Int)
+    */
     func testFloatIntAddition()
     {
         var totalFloatInt = floatValue + integerValue
@@ -121,6 +133,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(11), totalFloatInt)
     }
     
+    /*
+    Function tests CalculationUtility.+(Float, Double)
+    */
     func testFloatDoubleAddition()
     {
         var totalFloatDouble = floatValue + doubleValue
@@ -128,6 +143,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(2.34567890123456, totalFloatDouble, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.+(Double, Float)
+    */
     func testDoubleFloatAddition()
     {
         var totalDoubleFloat = doubleValue + floatValue
@@ -135,6 +153,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(2.34567890123456, totalDoubleFloat, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.+(UInt, Double)
+    */
     func testUIntDoubleAddition()
     {
         var totalUIntDouble = uIntValue + doubleValue
@@ -142,6 +163,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(1235.34567890123456, totalUIntDouble, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.+(Double, UInt)
+    */
     func testDoubleUIntAddition()
     {
         var totalDoubleUIntValue = doubleValue + uIntValue
@@ -149,6 +173,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(1235.34567890123456, totalDoubleUIntValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.+(UInt, Float)
+    */
     func testUIntFloatAddition()
     {
         var totalUIntFloat = uIntValue + floatValue
@@ -156,6 +183,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1235.0), totalUIntFloat)
     }
     
+    /*
+    Function tests CalculationUtility.+(Float, UInt)
+    */
     func testFloatUIntAddition()
     {
         var totalFloatUIntValue = floatValue + uIntValue
@@ -163,6 +193,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1235.0), totalFloatUIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.-(Int, Double)
+    */
     func testIntDoubleSubtraction()
     {
         var totalIntDoubleValue = integerValue - doubleValue
@@ -170,6 +203,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(8.65432109876544, totalIntDoubleValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(Double, Int)
+    */
     func testDoublIntSubtraction()
     {
         var totalDoubleIntValue = doubleValue - integerValue
@@ -177,6 +213,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(-8.65432109876544, totalDoubleIntValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(Int, Float)
+    */
     func testIntFloatSubtraction()
     {
         var totalIntFloatValue = integerValue - floatValue
@@ -184,6 +223,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(9), totalIntFloatValue)
     }
     
+    /*
+    Function tests CalculationUtility.-(Float, Int)
+    */
     func testFloatIntSubtraction()
     {
         var totalFloatIntValue = floatValue - integerValue
@@ -191,6 +233,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(-9), totalFloatIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.-(Float, Double)
+    */
     func testFloatDoubleSubtraction()
     {
         var totalFloatDoubleValue = floatValue - doubleValue
@@ -198,6 +243,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(-0.34567890123456, totalFloatDoubleValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(Double, Float)
+    */
     func testDoubleFloatSubtraction()
     {
         var totalDoubleFloatValue = doubleValue - floatValue
@@ -205,6 +253,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(0.34567890123456, totalDoubleFloatValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(UInt, Double)
+    */
     func testUIntDoubleSubtraction()
     {
         var totalUIntDoubleValue = uIntValue - doubleValue
@@ -212,6 +263,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(1232.65432109876544, totalUIntDoubleValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(Double, UInt)
+    */
     func testDoubleUIntSubtraction()
     {
         var totalDoubleUIntValue = doubleValue - uIntValue
@@ -219,6 +273,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(-1232.65432109876544, totalDoubleUIntValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.-(UInt, Float)
+    */
     func testUIntFloatSubtraction()
     {
         var totalUIntFloatValue = uIntValue - floatValue
@@ -226,6 +283,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1233), totalUIntFloatValue)
     }
     
+    /*
+    Function tests CalculationUtility.-(Float, UInt)
+    */
     func testFloatUIntSubtraction()
     {
         var totalFloatUIntValue = floatValue - uIntValue
