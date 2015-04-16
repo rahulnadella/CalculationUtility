@@ -501,8 +501,10 @@ class CalculationUtilityTests: XCTestCase
         /* This is an example of a performance test case. */
         self.measureBlock()
         {
+            /* Test Summation Functions */
             self.testSumOfInt()
             self.testSumOfDouble()
+            /* Test + (Addition Functions) */
             self.testIntDoubleAddition()
             self.testDoubleIntAddition()
             self.testIntFloatAddition()
@@ -513,6 +515,7 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntAddition()
             self.testUIntFloatAddition()
             self.testFloatUIntAddition()
+            /* Test - (Subtraction Functions) */
             self.testIntDoubleSubtraction()
             self.testDoublIntSubtraction()
             self.testIntFloatSubtraction()
@@ -523,6 +526,7 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntSubtraction()
             self.testUIntFloatSubtraction()
             self.testFloatUIntSubtraction()
+            /* Test * (Multiplication Functions) */
             self.testIntDoubleMultiplication()
             self.testDoubleIntMultiplication()
             self.testIntFloatMultiplication()
@@ -533,8 +537,11 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntMultiplication()
             self.testUIntFloatMultiplication()
             self.testFloatUIntMultiplication()
+            /* Test / (Division Functions) */
             self.testIntDoubleDivision()
             self.testDoubleIntDivision()
+            self.testIntFloatDivision()
+            self.testFloatIntDivision()
             self.testFloatDoubleDivision()
             self.testDoubleFloatDivision()
             self.testUIntDoubleDivision()
