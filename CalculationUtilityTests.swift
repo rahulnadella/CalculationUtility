@@ -333,6 +333,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(10), totalFloatIntValue)
     }
     
+    func testFloatDoubleMultiplication()
+    {
+        var totalFloatDoubleValue = floatValue * doubleValue
+        XCTAssertNotNil(totalFloatDoubleValue)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalFloatDoubleValue, accuracy)
+    }
+    
+    func testDoubleFloatMultiplication()
+    {
+        var totalDoubleFloatValue = doubleValue * floatValue
+        XCTAssertNotNil(totalDoubleFloatValue)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, accuracy)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -367,6 +381,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleIntMultiplication()
             self.testIntFloatMultiplication()
             self.testFloatIntMultiplication()
+            self.testFloatDoubleMultiplication()
+            self.testDoubleFloatMultiplication()
         }
     }
     
