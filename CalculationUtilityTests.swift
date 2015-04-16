@@ -37,7 +37,7 @@ class CalculationUtilityTests: XCTestCase
     private var doubleValue:Double = 1.34567890123456
     private var uIntValue = 1234;
     
-    let accuracy = 0.00000001
+    let ACCURACY = 0.00000001
     /*
     Setup method for CalculationUtilityTests
     */
@@ -140,7 +140,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalFloatDouble = floatValue + doubleValue
         XCTAssertNotNil(totalFloatDouble)
-        XCTAssertEqualWithAccuracy(2.34567890123456, totalFloatDouble, accuracy)
+        XCTAssertEqualWithAccuracy(2.34567890123456, totalFloatDouble, ACCURACY)
     }
     
     /*
@@ -150,7 +150,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleFloat = doubleValue + floatValue
         XCTAssertNotNil(totalDoubleFloat)
-        XCTAssertEqualWithAccuracy(2.34567890123456, totalDoubleFloat, accuracy)
+        XCTAssertEqualWithAccuracy(2.34567890123456, totalDoubleFloat, ACCURACY)
     }
     
     /*
@@ -160,7 +160,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalUIntDouble = uIntValue + doubleValue
         XCTAssertNotNil(totalUIntDouble)
-        XCTAssertEqualWithAccuracy(1235.34567890123456, totalUIntDouble, accuracy)
+        XCTAssertEqualWithAccuracy(1235.34567890123456, totalUIntDouble, ACCURACY)
     }
     
     /*
@@ -170,7 +170,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleUIntValue = doubleValue + uIntValue
         XCTAssertNotNil(totalDoubleUIntValue)
-        XCTAssertEqualWithAccuracy(1235.34567890123456, totalDoubleUIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(1235.34567890123456, totalDoubleUIntValue, ACCURACY)
     }
     
     /*
@@ -200,7 +200,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalIntDoubleValue = integerValue - doubleValue
         XCTAssertNotNil(totalIntDoubleValue)
-        XCTAssertEqualWithAccuracy(8.65432109876544, totalIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(8.65432109876544, totalIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -210,7 +210,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleIntValue = doubleValue - integerValue
         XCTAssertNotNil(totalDoubleIntValue)
-        XCTAssertEqualWithAccuracy(-8.65432109876544, totalDoubleIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(-8.65432109876544, totalDoubleIntValue, ACCURACY)
     }
     
     /*
@@ -240,7 +240,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalFloatDoubleValue = floatValue - doubleValue
         XCTAssertNotNil(totalFloatDoubleValue)
-        XCTAssertEqualWithAccuracy(-0.34567890123456, totalFloatDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(-0.34567890123456, totalFloatDoubleValue, ACCURACY)
     }
     
     /*
@@ -250,7 +250,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleFloatValue = doubleValue - floatValue
         XCTAssertNotNil(totalDoubleFloatValue)
-        XCTAssertEqualWithAccuracy(0.34567890123456, totalDoubleFloatValue, accuracy)
+        XCTAssertEqualWithAccuracy(0.34567890123456, totalDoubleFloatValue, ACCURACY)
     }
     
     /*
@@ -260,7 +260,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalUIntDoubleValue = uIntValue - doubleValue
         XCTAssertNotNil(totalUIntDoubleValue)
-        XCTAssertEqualWithAccuracy(1232.65432109876544, totalUIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(1232.65432109876544, totalUIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -270,7 +270,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleUIntValue = doubleValue - uIntValue
         XCTAssertNotNil(totalDoubleUIntValue)
-        XCTAssertEqualWithAccuracy(-1232.65432109876544, totalDoubleUIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(-1232.65432109876544, totalDoubleUIntValue, ACCURACY)
     }
     
     /*
@@ -300,7 +300,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalIntDoubleValue = integerValue * doubleValue
         XCTAssertNotNil(totalIntDoubleValue)
-        XCTAssertEqualWithAccuracy(13.4567890123456, totalIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(13.4567890123456, totalIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -310,7 +310,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleIntValue = doubleValue * integerValue
         XCTAssertNotNil(totalDoubleIntValue)
-        XCTAssertEqualWithAccuracy(13.4567890123456, totalDoubleIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(13.4567890123456, totalDoubleIntValue, ACCURACY)
     }
     
     /*
@@ -340,7 +340,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalFloatDoubleValue = floatValue * doubleValue
         XCTAssertNotNil(totalFloatDoubleValue)
-        XCTAssertEqualWithAccuracy(1.34567890123456, totalFloatDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalFloatDoubleValue, ACCURACY)
     }
     
     /*
@@ -350,7 +350,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleFloatValue = doubleValue * floatValue
         XCTAssertNotNil(totalDoubleFloatValue)
-        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, accuracy)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, ACCURACY)
     }
     
     /*
@@ -360,7 +360,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalUIntDoubleValue = uIntValue * doubleValue
         XCTAssertNotNil(totalUIntDoubleValue)
-        XCTAssertEqualWithAccuracy(1660.56776412344704, totalUIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(1660.56776412344704, totalUIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -370,7 +370,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleUIntValue = doubleValue * uIntValue
         XCTAssertNotNil(totalDoubleUIntValue)
-        XCTAssertEqualWithAccuracy(1660.56776412344704, totalDoubleUIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(1660.56776412344704, totalDoubleUIntValue, ACCURACY)
     }
     
     /*
@@ -400,7 +400,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalIntDoubleValue = integerValue / doubleValue
         XCTAssertNotNil(totalIntDoubleValue)
-        XCTAssertEqualWithAccuracy(7.43119327413527, totalIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(7.43119327413527, totalIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -410,7 +410,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleIntValue = doubleValue / integerValue
         XCTAssertNotNil(totalDoubleIntValue)
-        XCTAssertEqualWithAccuracy(0.13456789012346, totalDoubleIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(0.13456789012346, totalDoubleIntValue, ACCURACY)
     }
     
     /*
@@ -440,7 +440,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalFloatDoubleValue = floatValue / doubleValue
         XCTAssertNotNil(totalFloatDoubleValue)
-        XCTAssertEqualWithAccuracy(0.74311932741353, totalFloatDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(0.74311932741353, totalFloatDoubleValue, ACCURACY)
     }
     
     /*
@@ -450,7 +450,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleFloatValue = doubleValue / floatValue
         XCTAssertNotNil(totalDoubleFloatValue)
-        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, accuracy)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, ACCURACY)
     }
     
     /*
@@ -460,7 +460,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalUIntDoubleValue = uIntValue / doubleValue
         XCTAssertNotNil(totalUIntDoubleValue)
-        XCTAssertEqualWithAccuracy(917.00925002829208, totalUIntDoubleValue, accuracy)
+        XCTAssertEqualWithAccuracy(917.00925002829208, totalUIntDoubleValue, ACCURACY)
     }
     
     /*
@@ -470,7 +470,7 @@ class CalculationUtilityTests: XCTestCase
     {
         var totalDoubleUIntValue = doubleValue / uIntValue
         XCTAssertNotNil(totalDoubleUIntValue)
-        XCTAssertEqualWithAccuracy(0.00109050154071, totalDoubleUIntValue, accuracy)
+        XCTAssertEqualWithAccuracy(0.00109050154071, totalDoubleUIntValue, ACCURACY)
     }
     
     /*
