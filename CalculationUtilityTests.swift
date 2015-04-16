@@ -333,6 +333,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(10), totalFloatIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.*(Float, Double)
+    */
     func testFloatDoubleMultiplication()
     {
         var totalFloatDoubleValue = floatValue * doubleValue
@@ -340,11 +343,34 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(1.34567890123456, totalFloatDoubleValue, accuracy)
     }
     
+    /*
+    Function tests CalculationUtility.*(Double, Float)
+    */
     func testDoubleFloatMultiplication()
     {
         var totalDoubleFloatValue = doubleValue * floatValue
         XCTAssertNotNil(totalDoubleFloatValue)
         XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, accuracy)
+    }
+    
+    /*
+    Function tests CalculationUtility.*(UInt, Double)
+    */
+    func testUIntDoubleMultiplication()
+    {
+        var totalUIntDoubleValue = uIntValue * doubleValue
+        XCTAssertNotNil(totalUIntDoubleValue)
+        XCTAssertEqualWithAccuracy(1660.56776412344704, totalUIntDoubleValue, accuracy)
+    }
+    
+    /*
+    Function tests CalculationUtility.*(Double, UInt)
+    */
+    func testDoubleUIntMultiplication()
+    {
+        var totalDoubleUIntValue = doubleValue * uIntValue
+        XCTAssertNotNil(totalDoubleUIntValue)
+        XCTAssertEqualWithAccuracy(1660.56776412344704, totalDoubleUIntValue, accuracy)
     }
     
     /*
@@ -383,6 +409,8 @@ class CalculationUtilityTests: XCTestCase
             self.testFloatIntMultiplication()
             self.testFloatDoubleMultiplication()
             self.testDoubleFloatMultiplication()
+            self.testUIntDoubleMultiplication()
+            self.testDoubleUIntMultiplication()
         }
     }
     
