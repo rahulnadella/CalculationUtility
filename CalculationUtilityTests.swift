@@ -434,6 +434,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility./(Float, Double)
+    */
+    func testFloatDoubleDivision()
+    {
+        var totalFloatDoubleValue = floatValue / doubleValue
+        XCTAssertNotNil(totalFloatDoubleValue)
+        XCTAssertEqualWithAccuracy(0.74311932741353, totalFloatDoubleValue, accuracy)
+    }
+    
+    /*
+    Function tests CalculationUtility./(Double, Float)
+    */
+    func testDoubleFloatDivision()
+    {
+        var totalDoubleFloatValue = doubleValue / floatValue
+        XCTAssertNotNil(totalDoubleFloatValue)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleFloatValue, accuracy)
+    }
+    
+    /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
     func testPerformanceExample()

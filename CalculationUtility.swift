@@ -687,3 +687,33 @@ func /(lhs: Float, rhs: Int) -> Float
 {
     return lhs / Float(rhs)
 }
+
+/*
+The / function overloaded to take the parameters of Float,Double and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Float value
+:param rhs
+        The Double value
+:return An explicitly cast Double value
+*/
+func /(lhs: Float, rhs: Double) -> Double
+{
+    return Double(lhs) / rhs
+}
+
+/*
+The / function overloaded to take the parameters of Double,Float and return
+an explicit conversion of a Double.
+
+:param lhs
+        The Double value
+:param rhs
+        The Float value
+:return An explicitly cast Double value
+*/
+func /(lhs: Double, rhs: Float) -> Double
+{
+    return lhs / Double(rhs)
+}
