@@ -414,6 +414,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility./(Int, Float)
+    */
+    func testIntFloatDivision()
+    {
+        var totalIntFloatValue = integerValue / floatValue
+        XCTAssertNotNil(totalIntFloatValue)
+        XCTAssertEqual(Float(10), totalIntFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility./(Float, Int)
+    */
+    func testFloatIntDivision()
+    {
+        var totalFloatIntValue = floatValue / integerValue
+        XCTAssertNotNil(totalFloatIntValue)
+        XCTAssertEqual(Float(0.1), totalFloatIntValue)
+    }
+    
+    /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
     func testPerformanceExample()
