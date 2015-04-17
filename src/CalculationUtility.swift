@@ -157,7 +157,7 @@ func sumOf<T: NumericType>(input : [T]) -> T
 
 //MARK: ################################Factorial################################
 
-/* The FACTORIAL Prefix (similiar to counter++) */
+/* The FACTORIAL Postfix (similiar to counter++) */
 postfix operator ~! {}
 
 /*
