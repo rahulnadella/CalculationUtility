@@ -1180,3 +1180,33 @@ func *(lhs: Double, rhs: CGFloat) -> CGFloat
 {
     return CGFloat(lhs) * rhs
 }
+
+/*
+The * function overloaded to take the parameters of CGFloat,Int and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Int value
+:return An explicitly cast CGFloat value
+*/
+func *(lhs: CGFloat, rhs: Int) -> CGFloat
+{
+    return lhs * CGFloat(rhs)
+}
+
+/*
+The * function overloaded to take the parameters of Int,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Int value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func *(lhs: Int, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) * rhs
+}
