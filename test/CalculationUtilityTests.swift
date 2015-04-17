@@ -641,6 +641,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.-(CGFloat, Int)
+    */
+    func testCGFloatIntSubtraction()
+    {
+        let totalCGFloatIntValue = cgFloatValue - integerValue
+        XCTAssertNotNil(totalCGFloatIntValue)
+        XCTAssertEqual(CGFloat(-8), totalCGFloatIntValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.-(Int, CGFloat)
+    */
+    func testIntCGFloatSubtraction()
+    {
+        let totalIntCGFloatValue = integerValue - cgFloatValue
+        XCTAssertNotNil(totalIntCGFloatValue)
+        XCTAssertEqual(CGFloat(8), totalIntCGFloatValue)
+    }
+    
+    /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
     func testPerformanceExample()
@@ -709,6 +729,8 @@ class CalculationUtilityTests: XCTestCase
             self.testFloatCGFloatSubtraction()
             self.testCGFloatDoubleSubtraction()
             self.testDoubleCGFloatSubtraction()
+            self.testCGFloatIntSubtraction()
+            self.testIntCGFloatSubtraction()
         }
     }
     
