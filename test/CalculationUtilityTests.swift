@@ -740,6 +740,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(20), totalIntCGFloatValue)
     }
     
+    /*
+    Function tests CalculationUtility.*(CGFloat, UInt)
+    */
     func testCGFloatUIntMultiplication()
     {
         let totalCGFloatUIntValue = cgFloatValue * uIntValue
@@ -747,11 +750,34 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(2468), totalCGFloatUIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.*(UInt, CGFloat)
+    */
     func testUIntCGFloatMultiplication()
     {
         let totalUIntCGFloatValue = uIntValue * cgFloatValue
         XCTAssertNotNil(totalUIntCGFloatValue)
         XCTAssertEqual(CGFloat(2468), totalUIntCGFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility./(CGFloat, Float)
+    */
+    func testCGFloatFloatDivision()
+    {
+        let totalCGFloatFloatValue = cgFloatValue / floatValue
+        XCTAssertNotNil(totalCGFloatFloatValue)
+        XCTAssertEqual(CGFloat(2.0), totalCGFloatFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility./(Float, CGFloat)
+    */
+    func testFloatCGFloatDivision()
+    {
+        let totalFloatCGFloatValue = floatValue / cgFloatValue
+        XCTAssertNotNil(totalFloatCGFloatValue)
+        XCTAssertEqual(CGFloat(0.5), totalFloatCGFloatValue)
     }
     
     /*
@@ -836,6 +862,9 @@ class CalculationUtilityTests: XCTestCase
             self.testIntCGFloatMultiplication()
             self.testCGFloatUIntMultiplication()
             self.testUIntCGFloatMultiplication()
+            /* Test / (CGFloat Division Functions) */
+            self.testCGFloatFloatDivision()
+            self.testFloatCGFloatDivision()
         }
     }
     

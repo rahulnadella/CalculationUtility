@@ -1236,8 +1236,39 @@ an explicit conversion of a CGFloat.
         The CGFloat value
 :return An explicitly cast CGFloat value
 */
-
 func *(lhs: UInt, rhs: CGFloat) -> CGFloat
 {
     return CGFloat(lhs) * rhs
+}
+
+//MARK: ##################Explicit CGFloat Division Cast Functions##################
+
+/*
+The / function overloaded to take the parameters of CGFloat,Float and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Float value
+:return An explicitly cast CGFloat value
+*/
+func /(lhs: CGFloat, rhs: Float) -> CGFloat
+{
+    return lhs / CGFloat(rhs)
+}
+
+/*
+The / function overloaded to take the parameters of Float,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Float value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func /(lhs: Float, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) / rhs
 }
