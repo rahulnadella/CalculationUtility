@@ -86,8 +86,9 @@ extension UInt64 : NumericType {}
 
 //MARK: ###########################Summation Functions###########################
 
-/* The SUMMATION Prefix (similiar to ++) */
+/* The SUMMATION Prefix (similiar to ++counter) */
 prefix operator ∑ {}
+
 /*
 The prefix of the sum function using an Array.
 
@@ -152,6 +153,30 @@ The sumOf function of the array of specific NumericType (Double, Float, Int, etc
 func sumOf<T: NumericType>(input : [T]) -> T
 {
     return reduce(input, T()) {$0 + $1}
+}
+
+//MARK: ################################Factorial################################
+
+/* The FACTORIAL Prefix (similiar to counter++) */
+postfix operator ~! {}
+
+/*
+The prefix of the factorial function using an IntegerType.
+
+:param T
+        The specific Integer (greater than 0) value used to calculate the factorial value
+:return The factorial of a positive Integer greater than 1
+*/
+postfix public func ~! <T: IntegerType>(var num: T) -> T
+{
+    assert(num > 0, "Factorial function can not receive a number less than 1")
+    var result: T = 1
+    while (num > 1)
+    {
+        result = result * num
+        num--
+    }
+    return result
 }
 
 //MARK: ###########Additional Functions for Calculated Numerical Values###########

@@ -94,6 +94,15 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.~!(T)
+    */
+    func testFactorial()
+    {
+        let factorialValue = 7~!;
+        XCTAssertEqual(5040, factorialValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(Int, Double)
     */
     func testIntDoubleAddition()
