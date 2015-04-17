@@ -40,6 +40,7 @@ class CalculationUtilityTests: XCTestCase
     private var cgFloatValue:CGFloat = 2.0
     
     let ACCURACY = 0.00000001
+    let ACCURACY_CGFLOAT:CGFloat = 0.00000001
     /*
     Setup method for CalculationUtilityTests
     */
@@ -539,6 +540,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(3), totalFloatCGFloatValue)
     }
     
+    func testCGFloatDoubleAddition()
+    {
+        let totalCGFloatDoubleValue = cgFloatValue + doubleValue
+        XCTAssertNotNil(totalCGFloatDoubleValue)
+        XCTAssertEqualWithAccuracy(CGFloat(3.34567890123456), totalCGFloatDoubleValue, ACCURACY_CGFLOAT)
+    }
+    
+    func testDoubleCGFloatAddition()
+    {
+        let totalDoubleCGFloatValue = doubleValue + cgFloatValue
+        XCTAssertNotNil(totalDoubleCGFloatValue)
+        XCTAssertEqualWithAccuracy(CGFloat(3.34567890123456), totalDoubleCGFloatValue, ACCURACY_CGFLOAT)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -594,6 +609,11 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntDivision()
             self.testUIntFloatDivision()
             self.testFloatUIntDivision()
+            /*Test + (CGFloat Add Functions) */
+            self.testCGFloatFloatAddition()
+            self.testFloatCGFloatAddition()
+            self.testCGFloatDoubleAddition()
+            self.testDoubleCGFloatAddition()
         }
     }
     
