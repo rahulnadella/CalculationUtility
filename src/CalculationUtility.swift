@@ -179,6 +179,77 @@ postfix public func ~! <T: IntegerType>(var num: T) -> T
     return result
 }
 
+//MARK: ###########################Multiplication Functions###########################
+
+/* The MULTIPLY Prefix (similiar to ++counter) */
+prefix operator ∏ {}
+
+/*
+The prefix of the multiply function using an Array.
+
+:param T
+        The Array of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
+*/
+prefix func ∏<T: NumericType>(input: [T]) -> T
+{
+    return productOf(input)
+}
+
+/*
+The prefix of the multiply function using a specific section of MutableCollectionType
+
+:param T
+        The MutableCollectionType (Array, etc.) of specific NumericType
+        (using the NumericType protocol as a generic constraint, and call
+        it with any numeric type we like for instance, Double, Float, Int, etc.)
+*/
+prefix func ∏<T: NumericType>(input : Slice<T>) -> T
+{
+    return productOf(input)
+}
+
+/*
+The productOf function using variable arguments of specific NumericType (Double, Float, Int, etc.).
+
+:param T
+        The variable arguments of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
+*/
+func productOf<T: NumericType>(input : T...) -> T
+{
+    return productOf(input);
+}
+
+/*
+The productOf function using MutableCollectionType (for instance, Array, Set, etc.) of specific
+NumericType (Double, Float, Int, etc.).
+
+:param T
+        The MutableCollectionType of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.))
+*/
+func productOf<T: NumericType>(input : Slice<T>) -> T
+{
+    return productOf([] + input);
+}
+
+/*
+The productOf function of the array of specific NumericType (Double, Float, Int, etc.).
+
+:param T
+        The Array of specific NumericType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
+*/
+func productOf<T: NumericType>(var input : [T]) -> T
+{
+    return input.count == 0 ? T() : reduce(input[1..<input.count], input[0]) {$0 * $1}
+}
+
 //MARK: ###########Additional Functions for Calculated Numerical Values###########
 
 /*

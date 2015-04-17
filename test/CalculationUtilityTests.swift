@@ -109,6 +109,15 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function test CalculationUtility.productOf
+    */
+    func testProduct()
+    {
+        let product = productOf(2,3,4)
+        XCTAssertEqual(24, product)
+    }
+    
+    /*
     Function tests CalculationUtility.+(Int, Double)
     */
     func testIntDoubleAddition()
