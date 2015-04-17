@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+import CoreGraphics
 import Foundation
 
 /*
@@ -722,7 +723,7 @@ func *(lhs: Float, rhs: UInt) -> Float
     return lhs * Float(rhs)
 }
 
-//MARK: ####################Explicit Multiplication Cast Functions####################
+//MARK: ####################Explicit Division Cast Functions####################
 
 /*
 The / function overloaded to take the parameters of Int,Double and return
@@ -872,4 +873,36 @@ an explicit conversion of a Float.
 func /(lhs: Float, rhs: UInt) -> Float
 {
     return lhs / Float(rhs)
+}
+
+//MARK: ##################Explicit CGFloat Addition Cast Functions##################
+
+/*
+The + function overloaded to take the parameters of CGFloat,Float and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Float value
+:return An explicitly cast CGFloat value
+*/
+func +(lhs: CGFloat, rhs: Float) -> CGFloat
+{
+    return lhs + CGFloat(rhs)
+}
+
+/*
+The + function overloaded to take the parameters of Float,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Float value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func +(lhs: Float, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) + rhs
 }

@@ -24,6 +24,7 @@ THE SOFTWARE.
 
 import UIKit
 import XCTest
+import CoreGraphics
 /*
 The CalculationUtilityTests class provides the specific test cases for the 
 implemenation of the CalculationUtility.
@@ -36,6 +37,7 @@ class CalculationUtilityTests: XCTestCase
     private var floatValue:Float = 1.0
     private var doubleValue:Double = 1.34567890123456
     private var uIntValue = 1234;
+    private var cgFloatValue:CGFloat = 2.0
     
     let ACCURACY = 0.00000001
     /*
@@ -515,6 +517,26 @@ class CalculationUtilityTests: XCTestCase
         let totalFloatUIntValue = floatValue / uIntValue
         XCTAssertNotNil(totalFloatUIntValue)
         XCTAssertEqual(Float(0.00081037277147), totalFloatUIntValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.+(CGFloat, Float)
+    */
+    func testCGFloatFloatAddition()
+    {
+        let totalCGFloatFloatValue = cgFloatValue + floatValue
+        XCTAssertNotNil(totalCGFloatFloatValue)
+        XCTAssertEqual(CGFloat(3), totalCGFloatFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.+(Float, CGFloat)
+    */
+    func testFloatCGFloatAddition()
+    {
+        let totalFloatCGFloatValue = floatValue + cgFloatValue
+        XCTAssertNotNil(totalFloatCGFloatValue)
+        XCTAssertEqual(CGFloat(3), totalFloatCGFloatValue)
     }
     
     /*
