@@ -554,6 +554,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(CGFloat(3.34567890123456), totalDoubleCGFloatValue, ACCURACY_CGFLOAT)
     }
     
+    func testCGFloatIntAddition()
+    {
+        let totalCGFloatIntValue = cgFloatValue + integerValue
+        XCTAssertNotNil(totalCGFloatIntValue)
+        XCTAssertEqual(CGFloat(12.0), totalCGFloatIntValue)
+    }
+    
+    func testIntCGFloatAddition()
+    {
+        let totalIntCGFloatValue = integerValue + cgFloatValue
+        XCTAssertNotNil(totalIntCGFloatValue)
+        XCTAssertEqual(CGFloat(12.0), totalIntCGFloatValue)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -614,6 +628,8 @@ class CalculationUtilityTests: XCTestCase
             self.testFloatCGFloatAddition()
             self.testCGFloatDoubleAddition()
             self.testDoubleCGFloatAddition()
+            self.testCGFloatIntAddition()
+            self.testIntCGFloatAddition()
         }
     }
     
