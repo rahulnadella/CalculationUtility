@@ -540,6 +540,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(3), totalFloatCGFloatValue)
     }
     
+    /*
+    Function tests CalculationUtility.+(CGFloat, Double)
+    */
     func testCGFloatDoubleAddition()
     {
         let totalCGFloatDoubleValue = cgFloatValue + doubleValue
@@ -547,6 +550,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(CGFloat(3.34567890123456), totalCGFloatDoubleValue, ACCURACY_CGFLOAT)
     }
     
+    /*
+    Function tests CalculationUtility.+(Double, CGFloat)
+    */
     func testDoubleCGFloatAddition()
     {
         let totalDoubleCGFloatValue = doubleValue + cgFloatValue
@@ -554,6 +560,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(CGFloat(3.34567890123456), totalDoubleCGFloatValue, ACCURACY_CGFLOAT)
     }
     
+    /*
+    Function tests CalculationUtility.+(CGFloat, Int)
+    */
     func testCGFloatIntAddition()
     {
         let totalCGFloatIntValue = cgFloatValue + integerValue
@@ -561,6 +570,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(12.0), totalCGFloatIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.+(Int, CGFloat)
+    */
     func testIntCGFloatAddition()
     {
         let totalIntCGFloatValue = integerValue + cgFloatValue
@@ -568,6 +580,9 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(12.0), totalIntCGFloatValue)
     }
     
+    /*
+    Function tests CalculationUtility.+(CGFloat, UInt)
+    */
     func testCGFloatUIntAddition()
     {
         let totalCGFloatUIntValue = cgFloatValue + uIntValue
@@ -575,11 +590,34 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(1236), totalCGFloatUIntValue)
     }
     
+    /*
+    Function tests CalculationUtility.+(UInt, CGFloat)
+    */
     func testUIntCGFloatAddition()
     {
         let totalUIntCGFloatValue = uIntValue + cgFloatValue
         XCTAssertNotNil(totalUIntCGFloatValue)
         XCTAssertEqual(CGFloat(1236), totalUIntCGFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.-(CGFloat, Float)
+    */
+    func testCGFloatFloatSubtraction()
+    {
+        let totalCGFloatFloatValue = cgFloatValue - floatValue
+        XCTAssertNotNil(totalCGFloatFloatValue)
+        XCTAssertEqual(CGFloat(1), totalCGFloatFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.-(Float, CGFloat)
+    */
+    func testFloatCGFloatSubtraction()
+    {
+        let totalFloatCGFloatValue = floatValue - cgFloatValue
+        XCTAssertNotNil(totalFloatCGFloatValue)
+        XCTAssertEqual(CGFloat(-1), totalFloatCGFloatValue)
     }
     
     /*
@@ -646,6 +684,9 @@ class CalculationUtilityTests: XCTestCase
             self.testIntCGFloatAddition()
             self.testCGFloatUIntAddition()
             self.testUIntCGFloatAddition()
+            /* Test - (CGFloat Subtraction Functions) */
+            self.testCGFloatFloatSubtraction()
+            self.testFloatCGFloatSubtraction()
         }
     }
     
