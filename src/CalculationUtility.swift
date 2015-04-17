@@ -1028,3 +1028,33 @@ func -(lhs: Float, rhs: CGFloat) -> CGFloat
 {
     return CGFloat(lhs) - rhs
 }
+
+/*
+The - function overloaded to take the parameters of CGFloat,Double and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Double value
+:return An explicitly cast CGFloat value
+*/
+func -(lhs: CGFloat, rhs: Double) -> CGFloat
+{
+    return lhs - CGFloat(rhs)
+}
+
+/*
+The - function overloaded to take the parameters of Double,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Double value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func -(lhs: Double, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) - rhs
+}
