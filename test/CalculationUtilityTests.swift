@@ -740,6 +740,20 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(20), totalIntCGFloatValue)
     }
     
+    func testCGFloatUIntMultiplication()
+    {
+        let totalCGFloatUIntValue = cgFloatValue * uIntValue
+        XCTAssertNotNil(totalCGFloatUIntValue)
+        XCTAssertEqual(CGFloat(2468), totalCGFloatUIntValue)
+    }
+    
+    func testUIntCGFloatMultiplication()
+    {
+        let totalUIntCGFloatValue = uIntValue * cgFloatValue
+        XCTAssertNotNil(totalUIntCGFloatValue)
+        XCTAssertEqual(CGFloat(2468), totalUIntCGFloatValue)
+    }
+    
     /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
@@ -820,6 +834,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleCGFloatMultiplication()
             self.testCGFloatIntMultiplication()
             self.testIntCGFloatMultiplication()
+            self.testCGFloatUIntMultiplication()
+            self.testUIntCGFloatMultiplication()
         }
     }
     
