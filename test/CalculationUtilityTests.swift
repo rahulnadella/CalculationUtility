@@ -701,6 +701,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.*(CGFloat, Double)
+    */
+    func testCGFloatDoubleMultiplication()
+    {
+        let totalCGFloatDoubleValue = cgFloatValue * doubleValue
+        XCTAssertNotNil(totalCGFloatDoubleValue)
+        XCTAssertEqual(CGFloat(2.69135780246912), totalCGFloatDoubleValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.*(Double, CGFloat)
+    */
+    func testDoubleCGFloatMultiplication()
+    {
+        let totalDoulbeCGFloatValue = doubleValue * cgFloatValue
+        XCTAssertNotNil(totalDoulbeCGFloatValue)
+        XCTAssertEqual(CGFloat(2.69135780246912), totalDoulbeCGFloatValue)
+    }
+    
+    /*
     The testPerformanceExample tests the performance of all CalculationUtility class functions
     */
     func testPerformanceExample()
@@ -776,6 +796,8 @@ class CalculationUtilityTests: XCTestCase
             /* Test * (CGFloat Multiplication Functions) */
             self.testCGFloatFloatMultiplication()
             self.testFloatCGFloatMultiplication()
+            self.testCGFloatDoubleMultiplication()
+            self.testDoubleCGFloatMultiplication()
         }
     }
     
