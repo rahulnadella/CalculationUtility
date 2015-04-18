@@ -281,7 +281,7 @@ func cubed<T : NumericType>(number : T) -> T
 }
 
 /*
-The min function returns the minimum value within the collection
+The min function returns the minimum value within the Collection
 
 :param T
         The Collection consisting of specific values
@@ -289,6 +289,17 @@ The min function returns the minimum value within the collection
 func min<T : Comparable> (input : [T]) -> T
 {
     return reduce(input, input[0]) {$0 > $1 ? $1 : $0}
+}
+
+/*
+The max function returns the maximum value within the Collection
+
+:param T
+        The Collection consisting of specific values
+*/
+func max <T : Comparable> (input : [T]) -> T
+{
+    return reduce(input, input[0]) {$0 < $1 ? $1 : $0}
 }
 
 //MARK: ####################Explicit Addition Cast Functions####################

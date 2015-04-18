@@ -155,6 +155,16 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function test CalculationUtility.max([T])
+    */
+    func testMax()
+    {
+        let values = [101, 2, 6, 900, 2, 39, 50, 299, 10000]
+        let maxValue = max(values)
+        XCTAssertEqual(10000, maxValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(Int, Double)
     */
     func testIntDoubleAddition()
