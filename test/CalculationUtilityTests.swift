@@ -145,6 +145,16 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function test CalculationUtility.min([T])
+    */
+    func testMin()
+    {
+        let values = [1, 2, 4, 0, 9]
+        let minValue = min(values)
+        XCTAssertEqual(0, minValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(Int, Double)
     */
     func testIntDoubleAddition()
@@ -879,6 +889,7 @@ class CalculationUtilityTests: XCTestCase
             self.testProduct()
             self.testSquared()
             self.testCubed()
+            self.testMin()
             /* Test + (Addition Functions) */
             self.testIntDoubleAddition()
             self.testDoubleIntAddition()
