@@ -1332,3 +1332,33 @@ func /(lhs: Int, rhs: CGFloat) -> CGFloat
 {
     return CGFloat(lhs) / rhs
 }
+
+/*
+The / function overloaded to take the parameters of CGFloat,UInt and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The UInt value
+:return An explicitly cast CGFloat value
+*/
+func /(lhs: CGFloat, rhs: UInt) -> CGFloat
+{
+    return lhs / CGFloat(rhs)
+}
+
+/*
+The / function overloaded to take the parameters of UInt,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The UInt value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func /(lhs: UInt, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) / rhs
+}
