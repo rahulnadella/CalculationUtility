@@ -15,7 +15,7 @@ The CalculationUtility provides several functions to enable calculating of value
 
 ##Usage
 
-Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) CalculationUtility.swift to your project. This file can be found in src/CalculationUtility.swift.
+Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) to your project. This file can be found in [src/CalculationUtility.swift](https://github.com/rahulnadella/CalculationUtility/blob/master/src).
 
 ##License
 
