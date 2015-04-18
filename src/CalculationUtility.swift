@@ -254,17 +254,30 @@ func productOf<T: NumericType>(var input : [T]) -> T
 //MARK: ###########Additional Functions for Calculated Numerical Values###########
 
 /*
-The squared function returns a NumericType²
+The squared function returns a NumericType² (n² = n x n)
 
 :param T
-The specific NumberType (using the NumericType protocol as a
-generic constraint, and call it with any numeric type we like for instance,
-Double, Float, Int, etc.)
+        The specific NumberType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
 */
 func squared<T : NumericType>(number: T) -> T
 {
     /* Uses * Operator */
     return number * number
+}
+
+/*
+The cubic function returns a NumericType³ (n³ = n × n × n).
+
+:param T
+        The specific NumberType (using the NumericType protocol as a
+        generic constraint, and call it with any numeric type we like for instance,
+        Double, Float, Int, etc.)
+*/
+func cubed<T : NumericType>(number : T) -> T
+{
+    return number * number * number
 }
 
 //MARK: ####################Explicit Addition Cast Functions####################

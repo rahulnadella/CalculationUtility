@@ -121,6 +121,18 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function test CalculationUtility.cubed(T)
+    */
+    func testCubed()
+    {
+        let threeCubed = cubed(3)
+        XCTAssertEqual(27, threeCubed)
+        
+        let fiveCubed = cubed(5)
+        XCTAssertEqual(125, fiveCubed)
+    }
+    
+    /*
     Function tests CalculationUtility.+(Int, Double)
     */
     func testIntDoubleAddition()
@@ -851,6 +863,9 @@ class CalculationUtilityTests: XCTestCase
             /* Test Summation Functions */
             self.testSumOfInt()
             self.testSumOfDouble()
+            self.testFactorial()
+            self.testProduct()
+            self.testCubed()
             /* Test + (Addition Functions) */
             self.testIntDoubleAddition()
             self.testDoubleIntAddition()
