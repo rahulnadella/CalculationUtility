@@ -15,7 +15,7 @@ The CalculationUtility provides several functions to enable calculating of value
 
 ##Usage
 
-
+Add the CalculationUtility.swift to your project. This file can be found in src/CalculationUtility.swift.
 
 ##License
 
