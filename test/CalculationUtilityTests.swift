@@ -74,11 +74,11 @@ class CalculationUtilityTests: XCTestCase
         let sum4 = sumOf(arr)
         let sum5 = sumOf(arr[0...1])
         
-        XCTAssertEqual(6, sum1, "Int should be sumable")
-        XCTAssertEqual(6, sum2, "Int should be sumable")
-        XCTAssertEqual(6, sum3, "Int should be sumable")
-        XCTAssertEqual(6, sum4, "Int should be sumable")
-        XCTAssertEqual(3, sum5, "Int should be sumable")
+        XCTAssertEqual(6, sum1)
+        XCTAssertEqual(6, sum2)
+        XCTAssertEqual(6, sum3)
+        XCTAssertEqual(6, sum4)
+        XCTAssertEqual(3, sum5)
     }
     
     /*
@@ -95,11 +95,11 @@ class CalculationUtilityTests: XCTestCase
         let sum5 = sumOf(arr[0...1])
         
         let accuracy = 1E-10
-        XCTAssertEqualWithAccuracy(6.6, sum1, accuracy, "Double should be sumable")
-        XCTAssertEqualWithAccuracy(6.6, sum2, accuracy, "Double should be sumable")
-        XCTAssertEqualWithAccuracy(6.6, sum3, accuracy, "Double should be sumable")
-        XCTAssertEqualWithAccuracy(6.6, sum4, accuracy, "Double should be sumable")
-        XCTAssertEqualWithAccuracy(3.3, sum5, accuracy, "Double should be sumable")
+        XCTAssertEqualWithAccuracy(6.6, sum1, accuracy)
+        XCTAssertEqualWithAccuracy(6.6, sum2, accuracy)
+        XCTAssertEqualWithAccuracy(6.6, sum3, accuracy)
+        XCTAssertEqualWithAccuracy(6.6, sum4, accuracy)
+        XCTAssertEqualWithAccuracy(3.3, sum5, accuracy)
     }
     
     /*
