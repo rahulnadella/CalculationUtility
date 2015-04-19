@@ -41,6 +41,7 @@ Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/
     a - b -> 3.0
     a * b -> 10.0
     a / b -> 2.5
+    a % b -> 1
 
 ##License
 
