@@ -15,7 +15,32 @@ The CalculationUtility provides several functions to enable calculating of value
 
 ##Usage
 
-Add the CalculationUtility.swift to your project. This file can be found in src/CalculationUtility.swift.
+Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) to your project. This file can be found in [src/CalculationUtility.swift](https://github.com/rahulnadella/CalculationUtility/blob/master/src).
+
+####Summation Functions
+
+    ∑([1, 2, 3]) -> 6
+    sumOf(1, 2, 3) -> 6
+    ∑(array) -> 6
+    sumOf(array) -> 6
+    sumOf(array[0...1]) -> 3
+
+####Product Functions
+
+    ∏([2, 3, 4]) -> 24
+    productOf(2,3,4) -> 24
+    ∏(array) -> 24
+    productOf(array) -> 24
+    productOf(array[0...1]) -> 6
+    
+####Explicit Cast Functions
+
+    var a = 5.0
+    var b = 2
+    a + b  //7.0
+    a - b  //3.0
+    a * b  //10.0
+    a / b  //2.5
 
 ##License
 
