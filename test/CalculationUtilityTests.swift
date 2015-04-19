@@ -36,7 +36,7 @@ class CalculationUtilityTests: XCTestCase
     private var integerValue:Int = 10
     private var floatValue:Float = 1.0
     private var doubleValue:Double = 1.34567890123456
-    private var uIntValue = 1234;
+    private var uIntValue = 1234
     private var cgFloatValue:CGFloat = 2.0
     
     let ACCURACY = 0.00000001
@@ -107,7 +107,7 @@ class CalculationUtilityTests: XCTestCase
     */
     func testFactorial()
     {
-        let factorialValue = 7~!;
+        let factorialValue = 7~!
         XCTAssertEqual(5040, factorialValue)
     }
     

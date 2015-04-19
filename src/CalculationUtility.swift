@@ -221,7 +221,7 @@ The productOf function using variable arguments of specific NumericType (Double,
 */
 func productOf<T: NumericType>(input : T...) -> T
 {
-    return productOf(input);
+    return productOf(input)
 }
 
 /*
@@ -235,7 +235,7 @@ NumericType (Double, Float, Int, etc.).
 */
 func productOf<T: NumericType>(input : Slice<T>) -> T
 {
-    return productOf([] + input);
+    return productOf([] + input)
 }
 
 /*
