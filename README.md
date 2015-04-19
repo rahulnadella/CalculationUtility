@@ -37,10 +37,10 @@ Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/
 
     var a = 5.0
     var b = 2
-    a + b  //7.0
-    a - b  //3.0
-    a * b  //10.0
-    a / b  //2.5
+    a + b -> 7.0
+    a - b -> 3.0
+    a * b -> 10.0
+    a / b -> 2.5
 
 ##License
 
