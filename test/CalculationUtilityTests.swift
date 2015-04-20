@@ -605,6 +605,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.%(Float, Double)
+    */
+    func testFloatDoubleModulus()
+    {
+        let totalFloatDoubleValue = 20.0 % 3.00001
+        XCTAssertNotNil(totalFloatDoubleValue)
+        XCTAssertEqualWithAccuracy(1.99994, totalFloatDoubleValue, ACCURACY)
+    }
+    
+    /*
+    Function tests CalculationUtility.%(Double, Float)
+    */
+    func testDoubleFloatModulus()
+    {
+        let totalDoubleFloatValue = 3.0000001 % 2.0
+        XCTAssertNotNil(totalDoubleFloatValue)
+        XCTAssertEqualWithAccuracy(1.0000001, totalDoubleFloatValue, ACCURACY)
+    }
+    
+    /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
     func testCGFloatFloatAddition()
@@ -989,6 +1009,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleIntModulus()
             self.testIntFloatModulus()
             self.testFloatIntModulus()
+            self.testFloatDoubleModulus()
+            self.testDoubleFloatModulus()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
