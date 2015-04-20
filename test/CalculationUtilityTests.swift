@@ -563,6 +563,26 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertNotNil(totalFloatUIntValue)
         XCTAssertEqual(Float(0.00081037277147), totalFloatUIntValue)
     }
+
+    /*
+    Function tests CalculationUtility.%(Int, Double)
+    */
+    func testIntDoubleModulus()
+    {
+        let totalIntDoubleValue = integerValue % doubleValue
+        XCTAssertNotNil(totalIntDoubleValue)
+        XCTAssertEqualWithAccuracy(0.58024769135808, totalIntDoubleValue, ACCURACY)
+    }
+    
+    /*
+    Function tests CalculationUtility.%(Double, Int)
+    */
+    func testDoubleIntModulus()
+    {
+        let totalDoubleIntValue = doubleValue % integerValue
+        XCTAssertNotNil(totalDoubleIntValue)
+        XCTAssertEqualWithAccuracy(1.34567890123456, totalDoubleIntValue, ACCURACY)
+    }
     
     /*
     Function tests CalculationUtility.+(CGFloat, Float)
