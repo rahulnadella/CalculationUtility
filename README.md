@@ -2,7 +2,7 @@
 
 ##Overview
 
-The CalculationUtility provides several functions to enable calculating values easier using explicit casting. The CalculationUtility contains summation, product, factorial, min, max, squared, cubed, and overloaded +-*/ (which are not implicit casted). This utility can make your life with Swift easier when doing calculation between different type.
+The CalculationUtility provides several functions to enable calculating values easier using explicit casting. The CalculationUtility contains summation, product, factorial, min, max, squared, cubed, and overloaded +-*/ (which are explicitly casted). This utility can make your life with Swift easier when doing calculation between different type.
 
 #####Note
 >Swift currently has a type check and requires left and right operand of the same type. When using this utility you will lose type safety when using these operators, which is opposite to Swift design. 
