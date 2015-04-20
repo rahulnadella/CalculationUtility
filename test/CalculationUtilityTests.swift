@@ -1053,6 +1053,8 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleFloatModulus()
             self.testUIntDoubleModulus()
             self.testDoubleUIntModulus()
+            self.testUIntFloatModulus()
+            self.testFloatUIntModulus()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
