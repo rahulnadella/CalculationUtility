@@ -1032,6 +1032,36 @@ func %(lhs: Double, rhs: UInt) -> Double
     return lhs % Double(rhs)
 }
 
+/*
+The % function overloaded to take the parameters of UInt,Float and return
+an explicit conversion of a Float.
+
+:param lhs
+        The UInt value
+:param rhs
+        The Float value
+:return An explicitly cast Float value
+*/
+func %(lhs: UInt, rhs: Float) -> Float
+{
+    return Float(lhs) % rhs
+}
+
+/*
+The % function overloaded to take the parameters of Float,UInt and return
+an explicit conversion of a Float.
+
+:param lhs
+        The Float value
+:param rhs
+        The UInt value
+:return An explicitly cast Float value
+*/
+func %(lhs: Float, rhs: UInt) -> Float
+{
+    return lhs % Float(rhs)
+}
+
 //MARK: ##################Explicit CGFloat Addition Cast Functions##################
 
 /*

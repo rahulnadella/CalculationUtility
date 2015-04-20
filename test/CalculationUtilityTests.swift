@@ -645,6 +645,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.%(UInt, Float)
+    */
+    func testUIntFloatModulus()
+    {
+        let totalUIntFloatValue = 18 % Float(5.0)
+        XCTAssertNotNil(totalUIntFloatValue)
+        XCTAssertEqual(Float(3), totalUIntFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.%(Float, UInt)
+    */
+    func testFloatUIntModulus()
+    {
+        let totalFloatUIntValue = Float(5.0) % 2
+        XCTAssertNotNil(totalFloatUIntValue)
+        XCTAssertEqual(Float(1), totalFloatUIntValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
     func testCGFloatFloatAddition()
