@@ -585,6 +585,26 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.%(Int, Float)
+    */
+    func testIntFloatModulus()
+    {
+        let totalIntFloatValue = integerValue % Float(3)
+        XCTAssertNotNil(totalIntFloatValue)
+        XCTAssertEqual(Float(1), totalIntFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.%(Float, Int)
+    */
+    func testFloatIntModulus()
+    {
+        let totalFloatIntValue = Float(20) % 3
+        XCTAssertNotNil(totalFloatIntValue)
+        XCTAssertEqual(Float(2), totalFloatIntValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
     func testCGFloatFloatAddition()
@@ -967,6 +987,8 @@ class CalculationUtilityTests: XCTestCase
             /* Test % (Modulus Functions) */
             self.testIntDoubleModulus()
             self.testDoubleIntModulus()
+            self.testIntFloatModulus()
+            self.testFloatIntModulus()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
