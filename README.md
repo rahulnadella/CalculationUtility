@@ -17,6 +17,25 @@ The CalculationUtility provides several functions to enable calculating of value
 
 Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) to your project. This file can be found in [src/CalculationUtility.swift](https://github.com/rahulnadella/CalculationUtility/blob/master/src).
 
+####Explicit Cast Functions
+
+    var a = 5.0
+    var b = 2
+    a + b -> 7.0
+    a - b -> 3.0
+    a * b -> 10.0
+    a / b -> 2.5
+    a % b -> 1
+
+####Factorial Function
+    var value = 5
+    value~! = 120
+
+####Min/Max Functions
+    var numericalValues = [4, 2, 5, 120, 500, 1001, 1, 1002]
+    var minValue = min(numericalValues) -> 1
+    var maxValue = max(numericalValues) -> 1002
+
 ####Summation Functions
 
     ∑([1, 2, 3]) -> 6
@@ -32,16 +51,6 @@ Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/
     ∏(array) -> 24
     productOf(array) -> 24
     productOf(array[0...1]) -> 6
-    
-####Explicit Cast Functions
-
-    var a = 5.0
-    var b = 2
-    a + b -> 7.0
-    a - b -> 3.0
-    a * b -> 10.0
-    a / b -> 2.5
-    a % b -> 1
 
 ##License
 
