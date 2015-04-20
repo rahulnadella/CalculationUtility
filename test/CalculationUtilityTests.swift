@@ -964,7 +964,10 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntDivision()
             self.testUIntFloatDivision()
             self.testFloatUIntDivision()
-            /*Test + (CGFloat Add Functions) */
+            /* Test % (Modulus Functions) */
+            self.testIntDoubleModulus()
+            self.testDoubleIntModulus()
+            /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
             self.testCGFloatDoubleAddition()
