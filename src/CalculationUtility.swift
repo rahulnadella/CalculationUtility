@@ -302,7 +302,7 @@ func max <T : Comparable> (input : [T]) -> T
     return reduce(input, input[0]) {$0 < $1 ? $1 : $0}
 }
 
-//MARK: ####################Explicit Addition Cast Functions####################
+//MARK: ####################Explicit Addition (+) Cast Functions####################
 
 /*
 The + function overloaded to take the parameters of Int,Double and return
@@ -454,7 +454,7 @@ func +(lhs: Float, rhs: UInt) -> Float
     return lhs + Float(rhs)
 }
 
-//MARK: ####################Explicit Subtraction Cast Functions####################
+//MARK: ####################Explicit Subtraction (-) Cast Functions####################
 
 /*
 The - function overloaded to take the parameters of Int,Double and return
@@ -606,7 +606,7 @@ func -(lhs: Float, rhs: UInt) -> Float
     return lhs - Float(rhs)
 }
 
-//MARK: ####################Explicit Multiplication Cast Functions####################
+//MARK: ####################Explicit Multiplication (*) Cast Functions####################
 
 /*
 The * function overloaded to take the parameters of Int,Double and return
@@ -758,7 +758,7 @@ func *(lhs: Float, rhs: UInt) -> Float
     return lhs * Float(rhs)
 }
 
-//MARK: ####################Explicit Division Cast Functions####################
+//MARK: ####################Explicit Division (/) Cast Functions####################
 
 /*
 The / function overloaded to take the parameters of Int,Double and return
@@ -910,7 +910,7 @@ func /(lhs: Float, rhs: UInt) -> Float
     return lhs / Float(rhs)
 }
 
-//MARK: ####################Explicit Modulus Cast Functions####################
+//MARK: ####################Explicit Modulus (%) Cast Functions####################
 
 /*
 The % function overloaded to take the parameters of Int,Double and return
@@ -1062,7 +1062,7 @@ func %(lhs: Float, rhs: UInt) -> Float
     return lhs % Float(rhs)
 }
 
-//MARK: ##################Explicit CGFloat Addition Cast Functions##################
+//MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
 
 /*
 The + function overloaded to take the parameters of CGFloat,Float and return
@@ -1184,7 +1184,7 @@ func +(lhs: UInt, rhs: CGFloat) -> CGFloat
     return CGFloat(lhs) + rhs
 }
 
-//MARK: ##################Explicit CGFloat Subtraction Cast Functions##################
+//MARK: ##################Explicit CGFloat Subtraction (-) Cast Functions##################
 
 /*
 The - function overloaded to take the parameters of CGFloat,Float and return
@@ -1306,7 +1306,7 @@ func -(lhs: UInt, rhs: CGFloat) -> CGFloat
     return CGFloat(lhs) - rhs
 }
 
-//MARK: ##################Explicit CGFloat Multiplication Cast Functions##################
+//MARK: ##################Explicit CGFloat Multiplication (*) Cast Functions##################
 
 /*
 The * function overloaded to take the parameters of CGFloat,Float and return
@@ -1428,7 +1428,7 @@ func *(lhs: UInt, rhs: CGFloat) -> CGFloat
     return CGFloat(lhs) * rhs
 }
 
-//MARK: ##################Explicit CGFloat Division Cast Functions##################
+//MARK: ##################Explicit CGFloat Division (/) Cast Functions##################
 
 /*
 The / function overloaded to take the parameters of CGFloat,Float and return
@@ -1548,4 +1548,126 @@ an explicit conversion of a CGFloat.
 func /(lhs: UInt, rhs: CGFloat) -> CGFloat
 {
     return CGFloat(lhs) / rhs
+}
+
+//MARK: ##################Explicit CGFloat Modulus (%) Cast Functions##################
+
+/*
+The % function overloaded to take the parameters of CGFloat,Float and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Float value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: CGFloat, rhs: Float) -> CGFloat
+{
+    return lhs % CGFloat(rhs)
+}
+
+/*
+The % function overloaded to take the parameters of Float,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Float value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: Float, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) % rhs
+}
+
+/*
+The % function overloaded to take the parameters of CGFloat,Double and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Double value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: CGFloat, rhs: Double) -> CGFloat
+{
+    return lhs % CGFloat(rhs)
+}
+
+/*
+The % function overloaded to take the parameters of Double,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Double value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: Double, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) % rhs
+}
+
+/*
+The % function overloaded to take the parameters of CGFloat,Int and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The Int value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: CGFloat, rhs: Int) -> CGFloat
+{
+    return lhs % CGFloat(rhs)
+}
+
+/*
+The % function overloaded to take the parameters of Int,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The Int value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: Int, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) % rhs
+}
+
+/*
+The % function overloaded to take the parameters of CGFloat,UInt and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The CGFloat value
+:param rhs
+        The UInt value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: CGFloat, rhs: UInt) -> CGFloat
+{
+    return lhs % CGFloat(rhs)
+}
+
+/*
+The % function overloaded to take the parameters of UInt,CGFloat and return
+an explicit conversion of a CGFloat.
+
+:param lhs
+        The UInt value
+:param rhs
+        The CGFloat value
+:return An explicitly cast CGFloat value
+*/
+func %(lhs: UInt, rhs: CGFloat) -> CGFloat
+{
+    return CGFloat(lhs) % rhs
 }
