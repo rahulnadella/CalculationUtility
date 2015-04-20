@@ -297,7 +297,7 @@ The max function returns the maximum value within the Collection
 :param T
         The Collection consisting of specific values
 */
-func max <T : Comparable> (input : [T]) -> T
+func max<T : Comparable> (input : [T]) -> T
 {
     return reduce(input, input[0]) {$0 < $1 ? $1 : $0}
 }
