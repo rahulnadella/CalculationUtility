@@ -1200,6 +1200,38 @@ func <(lhs: Double, rhs: UInt) -> Bool
     return lhs < Double(rhs)
 }
 
+/*
+The < function overloaded to take the parameters of UInt,Float and return
+a Boolean value to indicate a true (if UInt is less than Float) otherwise
+false (Float greater than UInt)
+
+:param lhs
+        The UInt value
+:param rhs
+        The Float value
+:return An explicit cast less than Boolean value of true (UInt less than Float) otherwise false
+*/
+func <(lhs: UInt, rhs:Float) -> Bool
+{
+    return Float(lhs) < rhs
+}
+
+/*
+The < function overloaded to take the parameters of Float,UInt and return
+a Boolean value to indicate a true (if Float is less than UInt) otherwise
+false (UInt greater than Float)
+
+:param lhs
+        The Float value
+:param rhs
+        The UInt value
+:return An explicit cast less than Boolean value of true (Float less than UInt) otherwise false
+*/
+func <(lhs: Float, rhs:UInt) -> Bool
+{
+    return lhs < Float(rhs)
+}
+
 //MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
 
 /*
