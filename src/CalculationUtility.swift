@@ -1081,7 +1081,7 @@ false (Double greater than Int)
         The Int value
 :param rhs
         The Double value
-:return An explicit Boolean value of true (value less than) otherwise false
+:return An explicit cast less than Boolean value of true (Int less than Double) otherwise false
 */
 func <(lhs: Int, rhs: Double) -> Bool
 {
@@ -1097,11 +1097,43 @@ false (Int greater than Double)
         The Double value
 :param rhs
         The Int value
-:return An explicit Boolean value of true (value less than) otherwise false
+:return An explicit cast less than Boolean value of true (Double less than Int) otherwise false
 */
 func <(lhs: Double, rhs: Int) -> Bool
 {
     return lhs < Double(rhs)
+}
+
+/*
+The < function overloaded to take the parameters of Int,Float and return
+a Boolean value to indicate a true (if Int is less than Float) otherwise
+false (Float greater than Int)
+
+:param lhs
+        The Int value
+:param rhs
+        The Float value
+:return An explicit cast less than Boolean value of true (Int less than Float) otherwise false
+*/
+func <(lhs: Int, rhs: Float) -> Bool
+{
+    return Float(lhs) < rhs
+}
+
+/*
+The < function overloaded to take the parameters of Float,Int and return
+a Boolean value to indicate a true (if Float is less than Int) otherwise
+false (Int greater than Float)
+
+:param lhs
+        The Float value
+:param rhs
+        The Int value
+:return An explicit cast less than Boolean value of true (Float less than Int) otherwise false
+*/
+func <(lhs: Float, rhs: Int) -> Bool
+{
+    return lhs < Float(rhs)
 }
 
 

@@ -665,7 +665,7 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
-    Function tests CalculationUtility.%(Int, Double)
+    Function tests CalculationUtility.<(Int, Double)
     */
     func testIntDoubleLessThan()
     {
@@ -674,13 +674,30 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
-    Function tests CalculationUtility.%(Double, Int)
+    Function tests CalculationUtility.<(Double, Int)
     */
-
     func testDoubleIntLessThan()
     {
         let totalDoubleIntValue = 5.99999 < 6
         XCTAssertTrue(totalDoubleIntValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.<(Int, Float)
+    */
+    func testIntFloatLessThan()
+    {
+        let totalIntFloatLessThan = 5 < Float(5.0001)
+        XCTAssertTrue(totalIntFloatLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.<(Float, Int)
+    */
+    func testFloatIntLessThan()
+    {
+        let totalFloatIntLessThan = Float(4.9) < 5
+        XCTAssertTrue(totalFloatIntLessThan)
     }
     
     /*
@@ -1074,6 +1091,11 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntModulus()
             self.testUIntFloatModulus()
             self.testFloatUIntModulus()
+            /* Test < (Less Than Functions) */
+            self.testIntDoubleLessThan()
+            self.testDoubleIntLessThan()
+            self.testIntFloatLessThan()
+            self.testFloatIntLessThan()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
