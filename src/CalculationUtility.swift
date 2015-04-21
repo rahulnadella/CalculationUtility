@@ -1163,7 +1163,39 @@ false (Float greater than Double)
         The Float value
 :return An explicit cast less than Boolean value of true (Double less than Float) otherwise false
 */
-func <(lhs: Double, rhs:Float) -> Bool
+func <(lhs: Double, rhs: Float) -> Bool
+{
+    return lhs < Double(rhs)
+}
+
+/*
+The < function overloaded to take the parameters of UInt,Double and return
+a Boolean value to indicate a true (if UInt is less than Double) otherwise
+false (Double greater than UInt)
+
+:param lhs
+        The UInt value
+:param rhs
+        The Double value
+:return An explicit cast less than Boolean value of true (UInt less than Double) otherwise false
+*/
+func <(lhs: UInt, rhs: Double) -> Bool
+{
+    return Double(lhs) < rhs
+}
+
+/*
+The < function overloaded to take the parameters of Double,UInt and return
+a Boolean value to indicate a true (if Double is less than UInt) otherwise
+false (UInt greater than Double)
+
+:param lhs
+        The Double value
+:param rhs
+        The UInt value
+:return An explicit cast less than Boolean value of true (Double less than UInt) otherwise false
+*/
+func <(lhs: Double, rhs: UInt) -> Bool
 {
     return lhs < Double(rhs)
 }

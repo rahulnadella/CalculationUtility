@@ -36,7 +36,7 @@ class CalculationUtilityTests: XCTestCase
     private var integerValue:Int = 10
     private var floatValue:Float = 1.0
     private var doubleValue:Double = 1.34567890123456
-    private var uIntValue = 1234
+    private var uIntValue:UInt = 1234
     private var cgFloatValue:CGFloat = 2.0
     
     let ACCURACY = 0.00000001
@@ -714,8 +714,28 @@ class CalculationUtilityTests: XCTestCase
     */
     func testDoubleFloatLessThan()
     {
-        let totalFloatDoubleLessThan = 5.1 < Float(5.01)
-        XCTAssertFalse(totalFloatDoubleLessThan)
+        let totalDoubleFloatLessThan = 5.1 < Float(5.01)
+        XCTAssertFalse(totalDoubleFloatLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.<(UInt, Double)
+    */
+    func testUIntDoubleLessThan()
+    {
+        let uIntValue:UInt = 12
+        let totalUIntDoubleValue = uIntValue < 12.000001
+        XCTAssertTrue(totalUIntDoubleValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.<(Double, UInt)
+    */
+    func testDoubleUIntLessThan()
+    {
+        let uIntValue:UInt = 12
+        let totalDoubleUIntValue = 12.0000001 < uIntValue
+        XCTAssertFalse(totalDoubleUIntValue)
     }
     
     /*
@@ -1116,6 +1136,8 @@ class CalculationUtilityTests: XCTestCase
             self.testFloatIntLessThan()
             self.testFloatDoubleLessThan()
             self.testDoubleFloatLessThan()
+            self.testUIntDoubleLessThan()
+            self.testDoubleUIntLessThan()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
