@@ -1396,7 +1396,7 @@ func >(lhs: Float, rhs:UInt) -> Bool
 
 //MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
 
-/*
+/* 
 The + function overloaded to take the parameters of CGFloat,Float and return
 an explicit conversion of a CGFloat.
 
