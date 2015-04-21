@@ -36,30 +36,38 @@ operators are addition (+), subtraction (-), multiplication (*), and division (/
 protocol NumericType
 {
     /*
-    Add `lhs` and `rhs`, returning a result and trapping in case of
+    Add `lhs` and `rhs`, returns a result and trapping in case of
     arithmetic overflow.
     */
     func +(lhs: Self, rhs: Self) -> Self
     /*
-    Subtract `lhs` and `rhs`, returning a result and trapping in case of
+    Subtract `lhs` and `rhs`, returns a result and trapping in case of
     arithmetic overflow.
     */
     func -(lhs: Self, rhs: Self) -> Self
     /*
-    Multiply `lhs` and `rhs`, returning a result and trapping in case of
+    Multiply `lhs` and `rhs`, returns a result and trapping in case of
     arithmetic overflow.
     */
     func *(lhs: Self, rhs: Self) -> Self
     /*
-    Divide `lhs` and `rhs`, returning a result and trapping in case of
+    Divide `lhs` and `rhs`, returns a result and trapping in case of
     arithmetic overflow.
     */
     func /(lhs: Self, rhs: Self) -> Self
     /*
-    Divide `lhs` and `rhs`, returning the remainder and trapping in case of
+    Divide `lhs` and `rhs`, returns the remainder and trapping in case of
     arithmetic overflow.
     */
     func %(lhs: Self, rhs: Self) -> Self
+    /*
+    `lhs` is less than 'rhs' returns true otherwise false
+    */
+    func <(lhs: Self, rhs: Self) -> Bool
+    /*
+    `lhs` is greater than 'rhs' returns true otherwise false
+    */
+    func >(lhs: Self, rhs: Self) -> Bool
     /* 
     Initializer for NumericType that currently takes not arguments
     */
