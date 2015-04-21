@@ -665,6 +665,25 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.%(Int, Double)
+    */
+    func testIntDoubleLessThan()
+    {
+        let totalIntDoubleValue = 5 < 5.001
+        XCTAssertTrue(totalIntDoubleValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.%(Double, Int)
+    */
+
+    func testDoubleIntLessThan()
+    {
+        let totalDoubleIntValue = 5.99999 < 6
+        XCTAssertTrue(totalDoubleIntValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
     func testCGFloatFloatAddition()

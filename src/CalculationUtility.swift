@@ -1070,6 +1070,41 @@ func %(lhs: Float, rhs: UInt) -> Float
     return lhs % Float(rhs)
 }
 
+//MARK: ####################Explicit Less Than (<) Cast Functions####################
+
+/*
+The < function overloaded to take the parameters of Int,Double and return
+a Boolean value to indicate a true (if Int is less than Double) otherwise 
+false (Double greater than Int)
+
+:param lhs
+        The Int value
+:param rhs
+        The Double value
+:return An explicit Boolean value of true (value less than) otherwise false
+*/
+func <(lhs: Int, rhs: Double) -> Bool
+{
+    return Double(lhs) < rhs
+}
+
+/*
+The < function overloaded to take the parameters of Double,Int and return
+a Boolean value to indicate a true (if Double is less than Int) otherwise
+false (Int greater than Double)
+
+:param lhs
+        The Double value
+:param rhs
+        The Int value
+:return An explicit Boolean value of true (value less than) otherwise false
+*/
+func <(lhs: Double, rhs: Int) -> Bool
+{
+    return lhs < Double(rhs)
+}
+
+
 //MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
 
 /*
