@@ -1232,6 +1232,168 @@ func <(lhs: Float, rhs:UInt) -> Bool
     return lhs < Float(rhs)
 }
 
+//MARK: ####################Explicit Greater Than (>) Cast Functions####################
+
+/*
+The > function overloaded to take the parameters of Int,Double and return
+a Boolean value to indicate a true (if Int is greater than Double) otherwise
+false (Double less than Int)
+
+:param lhs
+        The Int value
+:param rhs
+        The Double value
+:return An explicit cast greater than Boolean value of true (Int greater than Double) otherwise false
+*/
+func >(lhs: Int, rhs: Double) -> Bool
+{
+    return Double(lhs) > rhs
+}
+
+/*
+The > function overloaded to take the parameters of Double,Int and return
+a Boolean value to indicate a true (if Double is greater than Int) otherwise
+false (Int less than Double)
+
+:param lhs
+        The Double value
+:param rhs
+        The Int value
+:return An explicit cast greater than Boolean value of true (Double greater than Int) otherwise false
+*/
+func >(lhs: Double, rhs: Int) -> Bool
+{
+    return lhs > Double(rhs)
+}
+
+/*
+The > function overloaded to take the parameters of Int,Float and return
+a Boolean value to indicate a true (if Int is greater than Float) otherwise
+false (Float less than Int)
+
+:param lhs
+        The Int value
+:param rhs
+        The Float value
+:return An explicit cast greater than Boolean value of true (Int greater than Float) otherwise false
+*/
+func >(lhs: Int, rhs: Float) -> Bool
+{
+    return Float(lhs) > rhs
+}
+
+/*
+The > function overloaded to take the parameters of Float,Int and return
+a Boolean value to indicate a true (if Float is greater than Int) otherwise
+false (Int less than Float)
+
+:param lhs
+        The Float value
+:param rhs
+        The Int value
+:return An explicit cast greater than Boolean value of true (Float greater than Int) otherwise false
+*/
+func >(lhs: Float, rhs: Int) -> Bool
+{
+    return lhs > Float(rhs)
+}
+
+/*
+The > function overloaded to take the parameters of Float,Double and return
+a Boolean value to indicate a true (if Float is greater than Double) otherwise
+false (Double less than Float)
+
+:param lhs
+        The Float value
+:param rhs
+        The Double value
+:return An explicit cast greater than Boolean value of true (Float greater than Double) otherwise false
+*/
+func >(lhs: Float, rhs: Double) -> Bool
+{
+    return Double(lhs) > rhs
+}
+
+/*
+The > function overloaded to take the parameters of Double,Float and return
+a Boolean value to indicate a true (if Double is greater than Float) otherwise
+false (Float less than Double)
+
+:param lhs
+        The Double value
+:param rhs
+        The Float value
+:return An explicit cast greater than Boolean value of true (Double greater than Float) otherwise false
+*/
+func >(lhs: Double, rhs: Float) -> Bool
+{
+    return lhs > Double(rhs)
+}
+
+/*
+The > function overloaded to take the parameters of UInt,Double and return
+a Boolean value to indicate a true (if UInt is greater than Double) otherwise
+false (Double less than UInt)
+
+:param lhs
+        The UInt value
+:param rhs
+        The Double value
+:return An explicit cast greater than Boolean value of true (UInt greater than Double) otherwise false
+*/
+func >(lhs: UInt, rhs: Double) -> Bool
+{
+    return Double(lhs) > rhs
+}
+
+/*
+The > function overloaded to take the parameters of Double,UInt and return
+a Boolean value to indicate a true (if Double is greater than UInt) otherwise
+false (UInt less than Double)
+
+:param lhs
+        The Double value
+:param rhs
+        The UInt value
+:return An explicit cast greater than Boolean value of true (Double greater than UInt) otherwise false
+*/
+func >(lhs: Double, rhs: UInt) -> Bool
+{
+    return lhs > Double(rhs)
+}
+
+/*
+The > function overloaded to take the parameters of UInt,Float and return
+a Boolean value to indicate a true (if UInt is greater than Float) otherwise
+false (Float less than UInt)
+
+:param lhs
+        The UInt value
+:param rhs
+        The Float value
+:return An explicit cast greater than Boolean value of true (UInt greater than Float) otherwise false
+*/
+func >(lhs: UInt, rhs:Float) -> Bool
+{
+    return Float(lhs) > rhs
+}
+
+/*
+The > function overloaded to take the parameters of Float,UInt and return
+a Boolean value to indicate a true (if Float is greater than UInt) otherwise
+false (UInt less than Float)
+
+:param lhs
+        The Float value
+:param rhs
+        The UInt value
+:return An explicit cast greater than Boolean value of true (Float greater than UInt) otherwise false
+*/
+func >(lhs: Float, rhs:UInt) -> Bool
+{
+    return lhs > Float(rhs)
+}
+
 //MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
 
 /*
