@@ -753,6 +753,100 @@ class CalculationUtilityTests: XCTestCase
     }
     
     /*
+    Function tests CalculationUtility.>(Int, Double)
+    */
+    func testIntDoubleGreaterThan()
+    {
+        var totalIntDoubleValue = 5 > 5.001
+        XCTAssertFalse(totalIntDoubleValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Double, Int)
+    */
+    func testDoubleIntGreaterThan()
+    {
+        let totalDoubleIntValue = 5.99999 > 6
+        XCTAssertFalse(totalDoubleIntValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Int, Float)
+    */
+    func testIntFloatGreaterThan()
+    {
+        let totalIntFloatLessThan = 5 > Float(5.0001)
+        XCTAssertFalse(totalIntFloatLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Float, Int)
+    */
+    func testFloatIntGreaterThan()
+    {
+        let totalFloatIntLessThan = Float(4.9) > 5
+        XCTAssertFalse(totalFloatIntLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Float, Double)
+    */
+    func testFloatDoubleGreaterThan()
+    {
+        let totalFloatDoubleLessThan = Float(4.9) > 5.0000001
+        XCTAssertFalse(totalFloatDoubleLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Double, Float)
+    */
+    func testDoubleFloatGreaterThan()
+    {
+        let totalDoubleFloatLessThan = 5.1 > Float(5.01)
+        XCTAssertTrue(totalDoubleFloatLessThan)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(UInt, Double)
+    */
+    func testUIntDoubleGreaterThan()
+    {
+        let uIntValue:UInt = 12
+        let totalUIntDoubleValue = uIntValue > 12.000001
+        XCTAssertFalse(totalUIntDoubleValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Double, UInt)
+    */
+    func testDoubleUIntGreaterThan()
+    {
+        let uIntValue:UInt = 12
+        let totalDoubleUIntValue = 12.0000001 > uIntValue
+        XCTAssertTrue(totalDoubleUIntValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(UInt, Float)
+    */
+    func testUIntFloatGreaterThan()
+    {
+        let uIntValue:UInt = 12
+        let totalUIntFloatValue = uIntValue < Float(12.01)
+        XCTAssertTrue(totalUIntFloatValue)
+    }
+    
+    /*
+    Function tests CalculationUtility.>(Float, UInt)
+    */
+    func testFloatUIntGreaterThan()
+    {
+        let uIntValue:UInt = 12
+        let totalFloatUIntValue = Float(12.01) > uIntValue
+        XCTAssertTrue(totalFloatUIntValue)
+    }
+    
+    /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
     func testCGFloatFloatAddition()
