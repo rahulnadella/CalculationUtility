@@ -122,8 +122,14 @@ class CalculationUtilityTests: XCTestCase
     */
     func testProduct()
     {
-        let product = productOf(2,3,4)
-        XCTAssertEqual(24, product)
+        let productIntValue = productOf(2, 3, 4)
+        XCTAssertEqual(24, productIntValue)
+        
+        let productFloatValue = ∏([2.5, 4.5, 6.5, 8.5])
+        XCTAssertEqual(621.5625, productFloatValue)
+        
+        let productZeroValue = productOf(2, 3, 4, 5, 6, 7, 8, 9, 0)
+        XCTAssertEqual(0, productZeroValue)
     }
     
     //MARK: ###########Additional Functions for Calculated Numerical Values###########
