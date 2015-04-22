@@ -669,8 +669,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testIntDoubleLessThan()
     {
-        let totalIntDoubleValue = 5 < 5.001
+        var totalIntDoubleValue = 5 < 5.001
         XCTAssertTrue(totalIntDoubleValue)
+        
+        totalIntDoubleValue = 5.1 < 5.01111
+        XCTAssertFalse(totalIntDoubleValue)
     }
     
     /*
@@ -678,8 +681,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testDoubleIntLessThan()
     {
-        let totalDoubleIntValue = 5.99999 < 6
+        var totalDoubleIntValue = 5.99999 < 6
         XCTAssertTrue(totalDoubleIntValue)
+        
+        totalDoubleIntValue = 6.0000001 < 6
+        XCTAssertFalse(totalDoubleIntValue)
     }
     
     /*
@@ -687,8 +693,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testIntFloatLessThan()
     {
-        let totalIntFloatLessThan = 5 < Float(5.0001)
+        var totalIntFloatLessThan = 5 < Float(5.0001)
         XCTAssertTrue(totalIntFloatLessThan)
+        
+        totalIntFloatLessThan = 5 < Float(4.999)
+        XCTAssertFalse(totalIntFloatLessThan)
     }
     
     /*
@@ -696,8 +705,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testFloatIntLessThan()
     {
-        let totalFloatIntLessThan = Float(4.9) < 5
+        var totalFloatIntLessThan = Float(4.9) < 5
         XCTAssertTrue(totalFloatIntLessThan)
+        
+        totalFloatIntLessThan = Float(5.01) < 5
+        XCTAssertFalse(totalFloatIntLessThan)
     }
     
     /*
@@ -705,8 +717,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testFloatDoubleLessThan()
     {
-        let totalFloatDoubleLessThan = Float(4.9) < 5.0000001
+        var totalFloatDoubleLessThan = Float(4.9) < 5.0000001
         XCTAssertTrue(totalFloatDoubleLessThan)
+        
+        totalFloatDoubleLessThan = Float(5.01) < 5.001
+        XCTAssertFalse(totalFloatDoubleLessThan)
     }
     
     /*
@@ -714,8 +729,11 @@ class CalculationUtilityTests: XCTestCase
     */
     func testDoubleFloatLessThan()
     {
-        let totalDoubleFloatLessThan = 5.1 < Float(5.01)
+        var totalDoubleFloatLessThan = 5.1 < Float(5.01)
         XCTAssertFalse(totalDoubleFloatLessThan)
+        
+        totalDoubleFloatLessThan = 5.000001 < Float(5.1)
+        XCTAssertTrue(totalDoubleFloatLessThan)
     }
     
     /*
@@ -724,8 +742,11 @@ class CalculationUtilityTests: XCTestCase
     func testUIntDoubleLessThan()
     {
         let uIntValue:UInt = 12
-        let totalUIntDoubleValue = uIntValue < 12.000001
+        var totalUIntDoubleValue = uIntValue < 12.000001
         XCTAssertTrue(totalUIntDoubleValue)
+        
+        totalUIntDoubleValue = uIntValue < 11.999999999
+        XCTAssertFalse(totalUIntDoubleValue)
     }
     
     /*
@@ -734,22 +755,31 @@ class CalculationUtilityTests: XCTestCase
     func testDoubleUIntLessThan()
     {
         let uIntValue:UInt = 12
-        let totalDoubleUIntValue = 12.0000001 < uIntValue
+        var totalDoubleUIntValue = 12.0000001 < uIntValue
         XCTAssertFalse(totalDoubleUIntValue)
+        
+        totalDoubleUIntValue = 11.999991 < uIntValue
+        XCTAssertTrue(totalDoubleUIntValue)
     }
     
     func testUIntFloatLessThan()
     {
         let uIntValue:UInt = 12
-        let totalUIntFloatValue = uIntValue < Float(12.01)
+        var totalUIntFloatValue = uIntValue < Float(12.01)
         XCTAssertTrue(totalUIntFloatValue)
+        
+        totalUIntFloatValue = uIntValue < Float(11.999991)
+        XCTAssertFalse(totalUIntFloatValue)
     }
     
     func testFloatUIntLessThan()
     {
         let uIntValue:UInt = 12
-        let totalFloatUIntValue = Float(12.01) < uIntValue
+        var totalFloatUIntValue = Float(12.01) < uIntValue
         XCTAssertFalse(totalFloatUIntValue)
+        
+        totalFloatUIntValue = Float(11.99) < uIntValue
+        XCTAssertTrue(totalFloatUIntValue)
     }
     
     /*
