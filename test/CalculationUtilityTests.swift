@@ -60,6 +60,8 @@ class CalculationUtilityTests: XCTestCase
         super.tearDown()
     }
     
+    //MARK: ###########################Summation Functions###########################
+    
     /*
     Tests Summation functions
     */
@@ -102,6 +104,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqualWithAccuracy(3.3, sum5, accuracy)
     }
     
+    //MARK: ################################Factorial################################
+    
     /*
     Function tests CalculationUtility.~!(T)
     */
@@ -111,6 +115,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(5040, factorialValue)
     }
     
+    //MARK: ###########################Multiplication Functions###########################
+    
     /*
     Function test CalculationUtility.productOf
     */
@@ -119,6 +125,8 @@ class CalculationUtilityTests: XCTestCase
         let product = productOf(2,3,4)
         XCTAssertEqual(24, product)
     }
+    
+    //MARK: ###########Additional Functions for Calculated Numerical Values###########
     
     /*
     Function test CalculationUtility.squared(T)
@@ -163,6 +171,8 @@ class CalculationUtilityTests: XCTestCase
         let maxValue = max(values)
         XCTAssertEqual(10000, maxValue)
     }
+    
+    //MARK: ####################Explicit Addition (+) Cast Functions####################
     
     /*
     Function tests CalculationUtility.+(Int, Double)
@@ -264,6 +274,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1235.0), totalFloatUIntValue)
     }
     
+    //MARK: ####################Explicit Subtraction (-) Cast Functions####################
+    
     /*
     Function tests CalculationUtility.-(Int, Double)
     */
@@ -363,6 +375,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertNotNil(totalFloatUIntValue)
         XCTAssertEqual(Float(-1233), totalFloatUIntValue)
     }
+    
+    //MARK: ####################Explicit Multiplication (*) Cast Functions####################
     
     /*
     Function tests CalculationUtility.*(Int, Double)
@@ -464,6 +478,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(1234), totalFloatUIntValue)
     }
     
+    //MARK: ####################Explicit Division (/) Cast Functions####################
+    
     /*
     Function tests CalculationUtility./(Int, Double)
     */
@@ -564,6 +580,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(Float(0.00081037277147), totalFloatUIntValue)
     }
 
+    //MARK: ####################Explicit Modulus (%) Cast Functions####################
+    
     /*
     Function tests CalculationUtility.%(Int, Double)
     */
@@ -663,6 +681,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertNotNil(totalFloatUIntValue)
         XCTAssertEqual(Float(1), totalFloatUIntValue)
     }
+    
+    //MARK: ####################Explicit Less Than (<) Cast Functions####################
     
     /*
     Function tests CalculationUtility.<(Int, Double)
@@ -788,6 +808,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertTrue(totalFloatUIntValue)
     }
     
+    //MARK: ####################Explicit Greater Than (>) Cast Functions####################
+    
     /*
     Function tests CalculationUtility.>(Int, Double)
     */
@@ -912,6 +934,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertFalse(totalFloatUIntValue)
     }
     
+    //MARK: ##################Explicit CGFloat Addition (+) Cast Functions##################
+    
     /*
     Function tests CalculationUtility.+(CGFloat, Float)
     */
@@ -991,6 +1015,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertNotNil(totalUIntCGFloatValue)
         XCTAssertEqual(CGFloat(1236), totalUIntCGFloatValue)
     }
+    
+    //MARK: ##################Explicit CGFloat Subtraction (-) Cast Functions##################
     
     /*
     Function tests CalculationUtility.-(CGFloat, Float)
@@ -1072,6 +1098,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertEqual(CGFloat(1232), totalUIntCGFloatValue)
     }
     
+    //MARK: ##################Explicit CGFloat Multiplication (*) Cast Functions##################
+    
     /*
     Function tests CalculationUtility.*(CGFloat, Float)
     */
@@ -1151,6 +1179,8 @@ class CalculationUtilityTests: XCTestCase
         XCTAssertNotNil(totalUIntCGFloatValue)
         XCTAssertEqual(CGFloat(2468), totalUIntCGFloatValue)
     }
+    
+    //MARK: ##################Explicit CGFloat Division (/) Cast Functions##################
     
     /*
     Function tests CalculationUtility./(CGFloat, Float)
