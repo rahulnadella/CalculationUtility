@@ -1344,6 +1344,17 @@ class CalculationUtilityTests: XCTestCase
             self.testDoubleUIntLessThan()
             self.testUIntFloatLessThan()
             self.testFloatUIntLessThan()
+            /* Test > (Greater Than Functions) */
+            self.testIntDoubleGreaterThan()
+            self.testDoubleIntGreaterThan()
+            self.testIntFloatGreaterThan()
+            self.testFloatIntGreaterThan()
+            self.testFloatDoubleGreaterThan()
+            self.testDoubleFloatGreaterThan()
+            self.testUIntDoubleGreaterThan()
+            self.testDoubleUIntGreaterThan()
+            self.testUIntFloatGreaterThan()
+            self.testFloatUIntGreaterThan()
             /* Test + (CGFloat Add Functions) */
             self.testCGFloatFloatAddition()
             self.testFloatCGFloatAddition()
