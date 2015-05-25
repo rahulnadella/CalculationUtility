@@ -10,10 +10,11 @@ The CalculationUtility contains the following functions: summation, product, fac
 >Swift currently has a type check and requires left and right operand of the same type. When using this utility you will lose type safety when using these operators, which is opposite to Swift design. 
 
 #####Version
+>Version 1.1 -> Fixed issue with Slice being removed and replaced with ArraySlice
 >Version 1.0 -> Design and Implementation of the CalculationUtility 
 
 #####Build
->Master -> Only works on iOS 8.0 or greater
+>Master -> Only works on iOS 8.3
 
 ##Usage
 
