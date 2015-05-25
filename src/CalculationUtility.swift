@@ -119,7 +119,7 @@ The prefix of the sum function using a specific section of MutableCollectionType
         (using the NumericType protocol as a generic constraint, and call 
         it with any numeric type we like for instance, Double, Float, Int, etc.)
 */
-prefix func ∑<T: NumericType>(input : Slice<T>) -> T
+prefix func ∑<T: NumericType>(input : ArraySlice<T>) -> T
 {
     return sumOf(input)
 }
@@ -146,7 +146,7 @@ NumericType (Double, Float, Int, etc.).
         generic constraint, and call it with any numeric type we like for instance,
         Double, Float, Int, etc.))
 */
-func sumOf<T: NumericType>(input : Slice<T>) -> T
+func sumOf<T: NumericType>(input : ArraySlice<T>) -> T
 {
     return sumOf([] + input)
 }
@@ -214,7 +214,7 @@ The prefix of the multiply function using a specific section of MutableCollectio
         (using the NumericType protocol as a generic constraint, and call
         it with any numeric type we like for instance, Double, Float, Int, etc.)
 */
-prefix func ∏<T: NumericType>(input : Slice<T>) -> T
+prefix func ∏<T: NumericType>(input : ArraySlice<T>) -> T
 {
     return productOf(input)
 }
@@ -241,7 +241,7 @@ NumericType (Double, Float, Int, etc.).
         generic constraint, and call it with any numeric type we like for instance,
         Double, Float, Int, etc.))
 */
-func productOf<T: NumericType>(input : Slice<T>) -> T
+func productOf<T: NumericType>(input : ArraySlice<T>) -> T
 {
     return productOf([] + input)
 }
