@@ -4,7 +4,7 @@
 
 The CalculationUtility provides several functions to enable calculation of values easier using explicit casting. 
 
-The CalculationUtility contains the following functions: summation, product, factorial, min, max, squared, cubed, and overloaded +-*/ (which are explicitly casted). This utility can make your life with Swift easier when doing calculations between different type (for example: double + int -> double + double(int)).
+The CalculationUtility contains the following functions: summation, product, factorial, min, max, squared, cubed, and overloaded +,-,*,/,<,> (which are explicitly casted). This utility can make your life with Swift easier when doing calculations between different type (for example: double + int -> double + double(int)).
 
 #####Note
 >Swift currently has a type check and requires left and right operand of the same type. When using this utility you will lose type safety when using these operators, which is opposite to Swift design. 
@@ -28,6 +28,8 @@ Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/
     a * b -> 10.0
     a / b -> 2.5
     a % b -> 1
+    let lessThanValue = b < a -> true
+    let greaterThanValue = b > a -> false
 
 ####Factorial Function
     var value = 5
