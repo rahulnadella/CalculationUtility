@@ -8,5 +8,5 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/rahulnadella/CalculationUtility.git', :tag => 'v1.1.0' }
   spec.platform = :ios, '8.0'
   spec.requires_arc = true
-  spec.source_files = 'src/*.swift'
+  spec.source_files = 'src'
 end
