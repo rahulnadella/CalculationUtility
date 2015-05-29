@@ -18,7 +18,11 @@ The CalculationUtility contains the following functions: summation, product, fac
 
 ##Usage
 
-Add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) to your project. This file can be found in [src/CalculationUtility.swift](https://github.com/rahulnadella/CalculationUtility/blob/master/src).
+The CalculationUtility uses Cocoapods, the developer will need to add this to their project Podfile:
+
+``pod 'CalculationUtility', '1.1.0'``
+
+If you want to add the [CalculationUtility](https://github.com/rahulnadella/CalculationUtility/blob/master/src/CalculationUtility.swift) to your project manually the source code can be found in [src/CalculationUtility.swift](https://github.com/rahulnadella/CalculationUtility/blob/master/src).
 
 ####Explicit Cast Functions
 
