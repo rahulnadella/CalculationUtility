@@ -6,6 +6,7 @@ Pod::Spec.new do |spec|
   spec.authors      = { 'Rahul Nadella' => 'rahulnadella@yahoo.com' }
   spec.summary      = 'Utility that provides explicit overloaded calculation functions'
   spec.source       = { :git => 'https://github.com/rahulnadella/CalculationUtility.git', :tag => 'v1.1.0' }
-  spec.source_files = 'src'
-  spec.framework    = 'UIKit, Foundation, CoreGraphics'
+  spec.platform = :ios, '8.0'
+  spec.requires_arc = true
+  spec.source_files = 'src/*.swift'
 end
