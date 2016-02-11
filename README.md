@@ -18,7 +18,7 @@ The CalculationUtility contains the following functions: summation, product, fac
 
 ##Usage
 
-The CalculationUtility uses Cocoapods, the developer will need to add this to their project Podfile:
+The CalculationUtility uses CocoaPods, the developer will need to add this to their project Podfile:
 
 ``pod 'CalculationUtility', '1.1.0'``
 
